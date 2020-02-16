@@ -1,0 +1,55 @@
+/* pages/device/index.wxss */
+
+.page {
+  min-height: 100vh;
+  background: #F5F5F5;
+}
+
+.total {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50rpx 20rpx;
+  background: #fff;
+}
+
+.total .total__item {
+  margin: 20rpx auto;
+  color: #8B8B8B;
+}
+
+.total .total__item.total__number {
+  font-size: 100rpx;
+  font-weight: bold;
+  color: #343434;
+}
+
+.total .total__item.total__button .button--primary {
+  color: #4389C2;
+  border-color: #4389C2;
+}
+
+.list {
+  margin: 20rpx;
+}
+
+.list .list-item:after {
+  right: 16px;
+}
+
+.list .list-item .image {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+
+.list .list-item__button {
+  padding: 0;
+}
+
+.list .manage-button {
+  border: none;
+  border-radius: 0;
+}

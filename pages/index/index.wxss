@@ -1,0 +1,71 @@
+/**index.wxss**/
+.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.user .user__name {
+  flex: 1;
+  font-size: 32rpx;
+}
+
+.user .user__setting {
+  flex: 1;
+  text-align: right;
+  font-size: 28rpx;
+}
+
+.user .user__setting .more {
+  vertical-align: middle;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0 0 6rpx 6rpx rgba(200, 200, 200, 0.3);
+}
+
+.card .left {
+  flex: 1;
+}
+
+.card .right {
+  flex: 1;
+}
+
+.card .title {
+  font-size: 22rpx;
+  color: #ccc;
+  margin-bottom: 20rpx;
+}
+
+.card .button {
+  font-weight: 300;
+}
+
+.card .collect__total {
+  font-size: 22rpx;
+}
+
+.card .collect__total .money {
+  margin-left: 6rpx;
+  font-size: 34rpx;
+}
+
+.card .left__total {
+  font-size: 22rpx;
+}
+
+.card .left__total .money {
+  margin-left: 6rpx;
+  font-size: 34rpx;
+}

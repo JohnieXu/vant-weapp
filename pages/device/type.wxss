@@ -1,0 +1,20 @@
+/* pages/device/type.wxss */
+.container {
+  padding: 20rpx;
+  background: #F5F5F5;
+}
+
+.list-item {
+  margin-bottom: 20rpx;
+}
+
+.list-item .image {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+
+.list-item .van-cell__right-icon-wrap {
+  /* 右侧按钮垂直居中 */
+  margin: auto;
+}

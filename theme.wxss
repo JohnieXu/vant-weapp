@@ -1,0 +1,4 @@
+page {
+  /* 自定义全局vant组件样式 https://youzan.github.io/vant-weapp/#/theme#ding-zhi-dan-ge-zu-jian-de-zhu-ti-yang-shi */
+  --button-border-radius: 6rpx;
+}

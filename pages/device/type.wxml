@@ -1,0 +1,19 @@
+<!--pages/device/type.wxml-->
+<view class="container">
+  <van-toast id="van-toast" />
+  <van-cell-group>
+    <van-cell
+      wx:for="{{ typeList }}"
+      wx:key="id"
+      title="{{ item.name }}"
+      label="{{ item.description }}"
+      border="{{ false }}"
+      custom-class="list-item"
+      is-link
+    >
+      <view slot="icon" class="icon">
+        <image class="image" src="https://t9.baidu.com/it/u=986967848,1345171143&fm=199&app=68&f=JPEG?w=375&h=375&s=08B7C81273A16509DC7758DC030050A0"></image>
+      </view>
+    </van-cell>
+  </van-cell-group>
+</view>

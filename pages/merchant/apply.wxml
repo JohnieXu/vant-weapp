@@ -1,0 +1,55 @@
+<!--pages/merchant/apply.wxml-->
+<!-- 注意：van-dialog的自定义样式名不用custom-class属性 -->
+<view class="merchant-apply">
+  <van-dialog
+    id="van-dialog"
+    show="{{ dialog.show }}"
+    confirm-button-text="准备完毕，进行开户"
+    class="merchant-dialog"
+    bindconfirm="handleDialogConfirm"
+    use-slot
+    use-title-slot
+  >
+    <view slot="title" class=" merchant-dialog__title">
+      <view class="merchant-dialog__title-text">开户前，请准备以下资料</view>
+      <van-icon name="cross" size="40rpx" class="merchant-dialog__title-icon" bindtap="handleDialogClose" />
+    </view>
+    <scroll-view style="height: 300px;" scroll-y>
+      <view class="merchant-dialog__content">
+        <van-cell-group border="{{ false }}">
+          <van-cell title="电子邮箱" border="{{ false }}" title-class="dot-left"></van-cell>
+          <van-cell title="法人证件照片" label="身份证正反面照片" border="{{ false }}" title-class="dot-left"></van-cell>
+          <van-cell title="店铺照片" label="包含门头照、内景和外景照" border="{{ false }}" title-class="dot-left"></van-cell>
+          <van-cell title="营业执照照片" label="非三证合一时，需补充提供政务登记证、组织机构代码证" border="{{ false }}" title-class="dot-left"></van-cell>
+          <van-cell title="法人银行账户信息" label="卡号、开户行、开户地址、支行信息" border="{{ true }}" custom-class="modal-content-border" title-class="dot-left"></van-cell>
+        </van-cell-group>
+        <van-cell-group border="{{ false }}" title="资质要求">
+          <van-cell title="资质原件拍照或扫描可以不加盖公章，复印件需盖章" border="{{ false }}" title-class="dot-left"></van-cell>
+          <van-cell title="如是三证合一，则无需提供税务登记证、组织机构代码证" border="{{ false }}" title-class="dot-left"></van-cell>
+        </van-cell-group>
+      </view>
+    </scroll-view>
+  </van-dialog>
+  <view class="action-list">
+    <van-row>
+      <van-col span="24" custom-class="action-list__item" bindtap="handleListItemTap1">
+        <view>
+          <view class="action-list__item-title">小微商户</view>
+          <view class="action-list__item-label">有经营行为和消费场景</view>
+        </view>
+      </van-col>
+      <van-col span="24" custom-class="action-list__item" bindtap="handleListItemTap2">
+        <view>
+          <view class="action-list__item-title">个体工商户</view>
+          <view class="action-list__item-label">营业执照类型：个体工商户</view>
+        </view>
+      </van-col>
+      <van-col span="24" custom-class="action-list__item" bindtap="handleListItemTap3">
+        <view>
+          <view class="action-list__item-title">企业商户</view>
+          <view class="action-list__item-label">营业执照类型：个人独资企业/合伙企业/有限责任公司/股份有限责任公司</view>
+        </view>
+      </van-col>
+    </van-row>
+  </view>
+</view>

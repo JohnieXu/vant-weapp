@@ -1,0 +1,16 @@
+{
+  "name": "vant-weapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "JohnieXu <281910378@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@vant/weapp": "^1.0.4"
+  },
+  "devDependencies": {
+    "json-server": "^0.15.1"
+  },
+  "scripts": {
+    "server": "json-server --watch ./server/db.json --static ./server"
+  }
+}

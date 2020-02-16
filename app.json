@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/merchant/merchant",
+    "pages/income/income",
+    "pages/agent/agent",
+    "pages/merchant/apply",
+    "pages/mine/mine",
+    "pages/device/type",
+    "pages/device/index",
+    "pages/device/list"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "支付后台",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button",
+    "van-action-sheet": "@vant/weapp/action-sheet",
+    "van-cell-group": "@vant/weapp/cell-group",
+    "van-cell": "@vant/weapp/cell",
+    "van-checkbox": "@vant/weapp/checkbox",
+    "van-checkbox-group": "@vant/weapp/checkbox-group",
+    "van-dialog": "@vant/weapp/dialog",
+    "van-divider": "@vant/weapp/divider",
+    "van-grid": "@vant/weapp/grid",
+    "van-grid-item": "@vant/weapp/grid-item",
+    "van-icon": "@vant/weapp/icon",
+    "van-image": "@vant/weapp/image",
+    "van-info": "@vant/weapp/info",
+    "van-loading": "@vant/weapp/loading",
+    "van-nav-bar": "@vant/weapp/nav-bar",
+    "van-notice-bar": "@vant/weapp/notice-bar",
+    "van-notify": "@vant/weapp/notify",
+    "van-overlay": "@vant/weapp/overlay",
+    "van-sticky": "@vant/weapp/sticky",
+    "van-toast": "@vant/weapp/toast",
+    "van-row": "@vant/weapp/row",
+    "van-col": "@vant/weapp/col"
+  }
+}

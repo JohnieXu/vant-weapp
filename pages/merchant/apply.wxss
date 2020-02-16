@@ -1,0 +1,113 @@
+/* pages/merchant/apply.wxss */
+
+.dot-left {
+  position: relative;
+}
+
+.dot-left::before {
+  content: "";
+  display: block;
+  width: .5em;
+  height: .5em;
+  border-radius: 50%;
+  position: absolute;
+  left: -0.8em;
+  top: .65em;
+  background: #EE712F;
+}
+
+.merchant-apply {
+  padding: 20px 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.merchant-dialog {
+  --dialog-border-radius: 8rpx;
+}
+
+/* dialog弹窗header底部边框 */
+.merchant-dialog .van-dialog__header {
+  position: relative;
+}
+.merchant-dialog .van-dialog__header::after {
+  position: absolute;
+  box-sizing: border-box;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  content: " ";
+  pointer-events: none;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 1px solid #eee;
+  -webkit-transform: scale(.5);
+  transform: scale(.5);
+
+}
+
+.merchant-dialog .merchant-dialog__content {
+  margin: 0 20rpx;
+}
+
+/* dialog弹窗确认按钮样式 */
+.merchant-dialog .dialog-index--van-dialog__confirm {
+  background: #EE712F;
+  color: #fff !important;
+  font-size: 28rpx;
+}
+
+/* dialog弹窗确认按钮wrapper样式 */
+.merchant-dialog .van-dialog__button {
+  padding: 36rpx 30rpx;
+}
+
+/* dialog弹窗内容分割线 */
+.merchant-dialog .modal-content-border.van-cell::after {
+  border-bottom: 1px dotted var(--cell-label-color,#969799);
+  right: 40rpx;
+}
+
+.merchant-dialog .modal-content-border.van-cell {
+  padding-bottom: 30rpx;
+}
+
+.merchant-dialog__title {
+  position: relative;
+  top: -20rpx;
+}
+
+.merchant-dialog__title-text {
+  color: #343340;
+  font-weight: 400;
+  font-size: 26rpx;
+}
+
+.merchant-dialog__title-icon {
+  position: absolute;
+  top: 0;
+  right: 20rpx;
+}
+
+.action-list {
+  padding: 0 20rpx;
+}
+
+.action-list__item {
+  margin-bottom: 40rpx;
+  padding: 40rpx 20rpx;
+  box-shadow: 0 0 10px rgba(200, 200, 200, 0.6);
+  border-radius: 8rpx;
+}
+
+.action-list__item-title {
+  line-height: 1.5;
+  color: #666;
+  font-size: 30rpx;
+}
+
+.action-list__item-label {
+  color: #959595;
+  font-size: 20rpx;
+}

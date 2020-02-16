@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="container">
+  <van-toast id="van-toast" />
+  <view class="user">
+    <view class="user__name">{{username}}</view>
+    <view class="user__setting">
+      <text class="more" bind:tap="bindMoreTap">更多</text>
+      <van-icon style="vertical-align: middle;" name="arrow" />
+    </view>
+  </view>
+  <view class="card">
+    <view class="left van-hairline--right">
+      <view class="title">今日收款{{0}}笔</view>
+      <view class="collect__total">¥<text class="money">{{'0.00'}}</text></view>
+      <van-button plain hairline size="mini" type="info" custom-class="button">查看明细</van-button>
+    </view>
+    <view class="right">
+      <view class="title">余额</view>
+      <view class="left__total">¥<text class="money">{{'0.00'}}</text></view>
+      <van-button plain hairline size="mini" type="info" custom-class="button">资金管理</van-button>
+    </view>
+  </view>
+  <view class="service">
+    <view class="title">我的服务</view>
+    <van-grid border="{{false}}" clickable square>
+      <van-grid-item icon="photo-o" text="我的商户" url="/pages/merchant/merchant"></van-grid-item>
+      <van-grid-item icon="photo-o" text="收钱设备" url="/pages/device/index"></van-grid-item>
+      <van-grid-item icon="photo-o" text="收入统计" url="/pages/income/income" dot></van-grid-item>
+      <van-grid-item icon="photo-o" text="代理统计" url="/pages/agent/agent"></van-grid-item>
+      <van-grid-item icon="photo-o" text="商户入驻" url="/pages/merchant/apply"></van-grid-item>
+      <van-grid-item icon="photo-o" text="更多"></van-grid-item>
+    </van-grid>
+  </view>
+</view>

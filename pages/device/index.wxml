@@ -1,0 +1,39 @@
+<!--pages/device/index.wxml-->
+<view class="page">
+  <van-toast id="van-toast" />
+  <view class="total">
+    <view class="total__item total__text">
+      我有收钱设备（个）
+    </view>
+    <view class="total__item total__number">{{device_list.length}}</view>
+    <view class="total__item total__button">
+      <van-button custom-class="button--primary" type="primary" plain bindtap="handleAddButtonTap">
+        <van-icon name="plus" style="vertical-align: middle;" />
+        <text style="vertical-align: middle;">添加一台新收钱设备</text>
+      </van-button>
+    </view>
+  </view>
+  <view class="list" wx:if="{{ device_list && device_list.length }}">
+    <van-cell-group border="{{ false }}">
+      <van-cell
+        wx:for="{{ device_list }}"
+        wx:key="id"
+        title="{{ item.device_name }}"
+        custom-class="list-item"
+        data-id="{{ item.id }}"
+        use-label-slot
+      >
+        <view slot="icon">
+          <image class="image" src="https://t9.baidu.com/it/u=986967848,1345171143&fm=199&app=68&f=JPEG?w=375&h=375&s=08B7C81273A16509DC7758DC030050A0" />
+        </view>
+        <view slot="label">
+          <view class="label create">添加日期：{{ item.created_at }}</view>
+          <view class="label number">设备编号：{{ item.device_id }}</view>
+        </view>
+      </van-cell>
+      <van-cell custom-class="list-item__button">
+        <van-button custom-class="manage-button" color="#4389C2" size="large" bindtap="handleManageButtonClick" block plain>管理</van-button>
+      </van-cell>
+    </van-cell-group>
+  </view>
+</view>
