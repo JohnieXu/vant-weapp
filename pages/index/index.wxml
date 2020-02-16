@@ -28,6 +28,7 @@
       <van-grid-item icon="photo-o" text="收入统计" url="/pages/income/income" dot></van-grid-item>
       <van-grid-item icon="photo-o" text="代理统计" url="/pages/agent/agent"></van-grid-item>
       <van-grid-item icon="photo-o" text="商户入驻" url="/pages/merchant/apply"></van-grid-item>
+      <van-grid-item icon="photo-o" text="对话框" url="/pages/dialog/index/index"></van-grid-item>
       <van-grid-item icon="photo-o" text="更多"></van-grid-item>
     </van-grid>
   </view>

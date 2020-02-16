@@ -1,0 +1,4 @@
+/* pages/dialog/basic/index.wxss */
+.cell-group__content {
+  padding: 0 16px 8px;
+}

@@ -9,7 +9,11 @@
     "pages/mine/mine",
     "pages/device/type",
     "pages/device/index",
-    "pages/device/list"
+    "pages/device/list",
+    "pages/dialog/index/index",
+    "pages/dialog/basic/index",
+    "pages/dialog/custom/index",
+    "pages/dialog/advanced/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

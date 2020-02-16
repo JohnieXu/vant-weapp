@@ -1,0 +1,58 @@
+<!--pages/dialog/advanced/index.wxml-->
+<view class="container">
+  <van-dialog
+    id="van-dialog"
+    show="{{ dialogShow }}"
+    message="资质原件拍照或扫描可以不加盖公章，复印件需盖章\n\n如是三证合一，则无需提供税务登记证、组织机构代码证"
+    message-align="left"
+    confirm-button-text="知道了"
+    confirm-button-color="#EE712F"
+    use-title-slot
+  >
+    <view slot="title" class=" merchant-dialog__title">
+      <view class="merchant-dialog__title-text">开户前，请准备以下资料</view>
+      <van-icon name="cross" size="40rpx" class="merchant-dialog__title-icon" bindtap="closeDialog" />
+    </view>
+  </van-dialog>
+
+  <van-dialog
+    id="van-dialog-2"
+    use-slot
+    use-title-slot
+  >
+    <view slot="title" style="padding-bottom: 10px;">
+      <van-icon name="close" color="#fff" size="30" bindtap="closeDialog2" />
+    </view>
+    <image class="image" src="https://tva1.sinaimg.cn/large/0082zybply1gbylbcwm44j30rs13bdsg.jpg" mode="aspectFit"></image>
+  </van-dialog>
+
+  <van-dialog
+    id="van-dialog-3"
+    use-title-slot
+  >
+    <view slot="title" style="color: #000;">提示</view>
+    <view>
+      <view>为了给你推荐更合适的漫展～</view>
+      <view>请开启定位权限～</view>
+    </view>
+  </van-dialog>
+
+  <van-cell-group title="进阶弹窗" border="{{ false }}" style="color: #666; font-size: 24rpx;">
+    <view style="padding: 0 16px;">通过组件调用 Dialog ，支持传入slot来定制titletitle，支持使用confirmButtonOpenType使用微信开放能力</view>
+  </van-cell-group>
+
+  <van-cell-group title="使用slot定制内容" border="{{ false }}" custom-class="cell-group__content">
+    <view style="margin-bottom: 30rpx;">
+      <van-button type="primary" bind:click="handleButtonClick1">使用slot定义title</van-button>
+    </view>
+    <view style="margin-bottom: 30rpx;">
+      <van-button type="primary" bind:click="handleButtonClick2">使用slot定义内容</van-button>
+    </view>
+    <view>
+      <van-button
+        type="primary"
+        bind:click="handleButtonClick3"
+      >微信开放能力</van-button>
+    </view>
+  </van-cell-group>
+</view>

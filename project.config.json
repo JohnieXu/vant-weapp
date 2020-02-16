@@ -57,8 +57,8 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "pages/merchant/apply",
-					"pathName": "pages/merchant/apply",
+					"name": "pages/dialog/advanced/index",
+					"pathName": "pages/dialog/advanced/index",
 					"query": "env=dev",
 					"scene": null
 				}

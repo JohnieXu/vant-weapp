@@ -1,0 +1,21 @@
+<!--pages/dialog/basic/index.wxml-->
+<view class="container">
+  <van-dialog id="van-dialog"></van-dialog>
+  <van-cell-group title="基本弹窗" border="{{ false }}" style="color: #666; font-size: 24rpx;">
+    <view style="padding: 0 16px;">弹出模态框，常用于消息提示、消息确认、在当前页面内完成特定的交互操作</view>
+    <view style="padding: 0 16px;">弹出框组件支持函数调用和组件调用两种方式</view>
+  </van-cell-group>
+  
+  <van-cell-group custom-class="cell-group__content" title="提示弹窗" border="{{ false }}">
+    <van-button type="primary" bind:click="handleButtonClick1" style="margin-right: 30rpx;">提示弹窗</van-button>
+    <van-button type="primary" bind:click="handleButtonClick2">提示弹窗（无标题）</van-button>
+  </van-cell-group>
+  <van-cell-group custom-class="cell-group__content" title="确认弹窗" border="{{ false }}">
+    <van-button type="primary" bind:click="handleButtonClick3">确认弹窗</van-button>
+  </van-cell-group>
+  <van-cell-group custom-class="cell-group__content" title="异步关闭" border="{{ false }}">
+    <van-button type="primary" bind:click="handleButtonClick4">异步关闭</van-button>
+  </van-cell-group>
+</view>
+
+

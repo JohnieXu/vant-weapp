@@ -1,0 +1,38 @@
+/* pages/dialog/advanced/index.wxss */
+.cell-group__content {
+  padding: 0 16px 8px;
+}
+.merchant-dialog__title {
+  position: relative;
+  top: -20rpx;
+}
+
+.merchant-dialog__title-text {
+  color: #343340;
+  font-weight: 400;
+  font-size: 26rpx;
+}
+
+.merchant-dialog__title-icon {
+  position: absolute;
+  top: 0;
+  right: 20rpx;
+}
+
+.dialog-index--dialog2 {
+  background: transparent !important;
+  overflow-y: hidden !important;
+}
+
+.dialog-index--dialog2 .image {
+  width: 260px;
+  height: 367px;
+}
+
+.dialog-index--dialog3 {
+  --dialog-background-color: rgba(255,255,255,0.8);
+  --popup-background-color: rgba(255,255,255,0.8);
+  --button-default-background-color: transparent;
+  color: #666;
+  /* background-color: rgba(255,255,255,0.9) !important; */
+}
