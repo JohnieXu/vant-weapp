@@ -1,1 +1,36 @@
 /* pages/dialog/custom/index.wxss */
+.cell-group__content {
+  padding: 0 16px 8px;
+}
+
+.theme-bilibili {
+  --theme-color: #C46B85;
+}
+
+.dialog-index--dialog-1 {
+  --dialog-border-radius: 6px !important;
+  --link-color: #8D9FA9;
+  --text-color: #8C8C8C;
+}
+
+.dialog-index--dialog-1 .wrapper{
+  padding-bottom: 16px;
+  text-align: center;
+  color: var(--text-color, #8C8C8C);
+  font-size: 13px;
+}
+
+.dialog-index--dialog-1 .image {
+  width: 170px;
+  height: 100px;
+  margin: 0;
+}
+
+.dialog-index--dialog-1 .text {
+  margin: 0 20px 6px;
+  text-align: left;
+}
+
+.dialog-index--dialog-1 .link {
+  color: var(--link-color, #8D9FA9);
+}

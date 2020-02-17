@@ -1,4 +1,6 @@
 // pages/dialog/custom/index.js
+import Dialog from '@vant/weapp/dialog/dialog'
+
 Page({
 
   /**
@@ -62,5 +64,40 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  // b站青少年模式提示
+  handleButtonClick1: function () {
+    Dialog({
+      selector: '#van-dialog-1',
+      showCancelButton: false,
+      className: 'dialog-1',
+      confirmButtonColor: '#C46B85',
+      confirmButtonText: '我知道了',
+      width: '240px'
+    })
+  },
+
+  // 高德地图图层使用提示
+  handleButtonClick2: function () {
+    Dialog({
+      selector: '#van-dialog-2',
+      showCancelButton: true,
+      className: 'dialog-2',
+      confirmButtonText: '同意',
+      cancelButtonText: '取消',
+      width: '520rpx',
+      title: '路况事件图层使用提示',
+      message: '高德地图路况事件图层功能为用户提供路况分享服务, 用户自行上报和分享的路况事件仅供参考, 不代表高德观点,高德对此不承担任何责任; 同时, 您需对您分享路况事件的行为负责, 为避免误导他人, 请您在分享路况事件时确保其真实、准确、及时。',
+      customStyle: `
+        --dialog-border-radius: 12rpx;
+        --dialog-header-padding-top: 32rpx;
+        --dialog-header-font-weight: 400;
+        --dialog-message-padding: 28rpx;
+        --dialog-message-font-size: 28rpx;
+        --dialog-message-line-height: 1.4;
+        --button-large-height: 80rpx;
+      `
+    })
+  },
 })

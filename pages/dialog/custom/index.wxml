@@ -1,2 +1,23 @@
 <!--pages/dialog/custom/index.wxml-->
-<text>pages/dialog/custom/index.wxml</text>
+<view class="container">
+  <van-dialog id="van-dialog-1" use-slot >
+    <view class="wrapper">
+      <image class="image" src="https://tva1.sinaimg.cn/large/0082zybply1gbzam0km8lj309g05kdgw.jpg" mode="aspectFit" />
+      <view class="text">为呵护未成年人健康成长，特别推出青少年模式，该模式下部分功能无法正常使用。请监护人主动选择，请设置监护密码。</view>
+      <text class="link">进入青少年模式 ></text>
+    </view>
+  </van-dialog>
+
+  <van-dialog id="van-dialog-2"></van-dialog>
+
+  <van-cell-group title="B站弹窗" border="{{ false }}" custom-class="cell-group__content theme-bilibili">
+    <view>
+      <van-button type="primary" bind:click="handleButtonClick1">青少年模式提示</van-button>
+    </view>
+  </van-cell-group>
+  <van-cell-group title="高德地图" border="{{ false }}" custom-class="cell-group__content theme-amap">
+    <view>
+      <van-button type="primary" bind:click="handleButtonClick2">路况事件图层使用提示</van-button>
+    </view>
+  </van-cell-group>
+</view>
