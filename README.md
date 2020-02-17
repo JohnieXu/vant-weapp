@@ -1,8 +1,8 @@
 # 基于有赞vant-weapp的小程序项目
 
 <p align="center">
-  <img src="https://tva1.sinaimg.cn/large/0082zybply1gbyps1qvd8j30d40d4dfu.jpg" alt="预览二维码" width="200" />
-  <p align="center" style="color: #232323;">请用微信扫码预览</p>
+  <img src="https://tva1.sinaimg.cn/large/0082zybply1gbzjtall0xj30u00u00v2.jpg" alt="预览二维码" width="200" />
+  <p align="center" style="color: #B66112;">请用微信扫码预览</p>
 </p>
 
 # 使用步骤
