@@ -34,3 +34,34 @@
 .dialog-index--dialog-1 .link {
   color: var(--link-color, #8D9FA9);
 }
+
+.dialog-index--dialog-3 {
+  --dialog-border-radius: 12rpx;
+}
+
+.dialog-index--dialog-3 .wrapper {
+  text-align: center;
+}
+
+.dialog-index--dialog-3 .swiper {
+  padding: 40rpx 0;
+  padding-bottom: 0;
+  height: 540rpx;
+}
+
+.dialog-index--dialog-3 .swiper--image {
+  width: 280rpx;
+  height: 280rpx;
+}
+
+.dialog-index--dialog-3 .swiper__text--big {
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+  color: #3c3c3c;
+  font-size: 40rpx;
+}
+
+.dialog-index--dialog-3 .swiper__text--small {
+  color: #8c8c8c;
+  font-size: 34rpx;
+}

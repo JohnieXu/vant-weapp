@@ -10,14 +10,48 @@
 
   <van-dialog id="van-dialog-2"></van-dialog>
 
+  <van-dialog
+    id="van-dialog-3"
+    show="{{ showDialog3 }}"
+    use-slot
+    class-name="dialog-3"
+    confirmButtonText="{{ dialog3.confirmButtonText }}"
+    bind:confirm="handleDialog3Confirm"
+  >
+    <view class="wrapper">
+      <swiper
+        indicator-dots="{{ true }}"
+        class="swiper"
+        indicator-active-color="#4195F3"
+        indicator-color="#C1DEFA"
+        current="{{ dialog3.current }}"
+        bindchange="onDialog3SwiperChange"
+      >
+        <swiper-item>
+          <image class="swiper--image" src="https://tva1.sinaimg.cn/large/0082zybply1gbze840xavj307806omyl.jpg" mode="aspectFit" />
+          <view class="swiper__text--big">地图数据没网也能</view>
+          <view class="swiper__text--small">看地图、查景点</view>
+        </swiper-item>
+        <swiper-item>
+          <image class="swiper--image" src="https://tva1.sinaimg.cn/large/0082zybply1gbze7og0hzj307806o3z6.jpg" mode="aspectFit" />
+          <view class="swiper__text--big">导航数据没网也能</view>
+          <view class="swiper__text--small">驾车导航</view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </van-dialog>
+
   <van-cell-group title="B站弹窗" border="{{ false }}" custom-class="cell-group__content theme-bilibili">
     <view>
       <van-button type="primary" bind:click="handleButtonClick1">青少年模式提示</van-button>
     </view>
   </van-cell-group>
   <van-cell-group title="高德地图" border="{{ false }}" custom-class="cell-group__content theme-amap">
-    <view>
+    <view style="margin-bottom: 30rpx;">
       <van-button type="primary" bind:click="handleButtonClick2">路况事件图层使用提示</van-button>
+    </view>
+    <view>
+      <van-button type="primary" bind:click="handleButtonClick3">地图功能引导弹窗</van-button>
     </view>
   </van-cell-group>
 </view>

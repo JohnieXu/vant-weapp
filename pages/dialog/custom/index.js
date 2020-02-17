@@ -7,7 +7,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    dialog3: {
+      current: 0,
+      confirmButtonText: '继续'
+    }
   },
 
   /**
@@ -66,6 +69,18 @@ Page({
 
   },
 
+  showDialog: function (index) {
+    this.setData({
+      [`showDialog${index || ''}`]: true
+    })
+  },
+
+  closeDialog: function (index) {
+    this.setData({
+      [`showDialog${index}`]: false
+    })
+  },
+
   // b站青少年模式提示
   handleButtonClick1: function () {
     Dialog({
@@ -99,5 +114,60 @@ Page({
         --button-large-height: 80rpx;
       `
     })
+  },
+
+  // 地图功能引导弹窗
+  handleButtonClick3: function () {
+    this.showDialog(3)
+  },
+
+  // 地图功能引导弹窗sipwerchange
+  onDialog3SwiperChange: function (e) {
+    console.log(e)
+    this.setData({
+      dialog3: {
+        ...this.data.dialog3,
+        current: e.detail.current,
+        confirmButtonText: e.detail.current === 0 ? '继续' : '知道了'
+      }
+    })
+  },
+
+  // 地图功能引导弹窗confirm
+  handleDialog3Confirm: function () {
+    let current = this.data.dialog3.current
+    if (current === 0) {
+      this.setData({
+        ...this.data,
+        dialog3: {
+          ...this.data.dialog3,
+          current: ++current
+        },
+        // showDialog3: true
+      })
+      return
+    } else if (current === 1) {
+      this.setData({
+        showDialog3: false
+      }, () => {
+        setTimeout(() => {
+          this.setData({
+            dialog3: {
+              current: 0,
+              confirmButtonText: '继续'
+            }
+          })
+        }, 300)
+      })
+      return
+    } else {
+      this.setData({
+        dialog3: {
+          ...this.data.dialog3,
+          current: 0
+        }
+      })
+      return
+    }
   },
 })
