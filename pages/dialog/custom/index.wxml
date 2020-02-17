@@ -41,6 +41,31 @@
     </view>
   </van-dialog>
 
+  <van-dialog
+    id="van-dialog-4"
+    class-name="dialog-4"
+    show="{{ showDialog4 }}"
+    show-cancel-button
+    cancel-button-text="暂不设置"
+    cancel-button-color="#6C6C6C"
+    confirm-button-text="去设置"
+    use-slot
+    use-title-slot
+  >
+    <view slot="title" class="title">需要通知权限</view>
+    <view class="wrapper">
+      <view class="detail">用于提供后台导航服务及消息通知服务</view>
+      <swiper class="swiper" autoplay circular>
+        <swiper-item>
+          <image src="https://tva1.sinaimg.cn/large/0082zybply1gbzgrl6zrmj30dc08wwer.jpg" mode="aspectFit" class="swiper--image"></image>
+        </swiper-item>
+        <swiper-item>
+          <image src="https://tva1.sinaimg.cn/large/0082zybply1gbzgrtvdh4j30dc08w746.jpg" mode="aspectFit" class="swiper--image"></image>
+        </swiper-item>
+      </swiper>
+    </view>
+  </van-dialog>
+
   <van-cell-group title="B站弹窗" border="{{ false }}" custom-class="cell-group__content theme-bilibili">
     <view>
       <van-button type="primary" bind:click="handleButtonClick1">青少年模式提示</van-button>
@@ -50,8 +75,11 @@
     <view style="margin-bottom: 30rpx;">
       <van-button type="primary" bind:click="handleButtonClick2">路况事件图层使用提示</van-button>
     </view>
-    <view>
+    <view style="margin-bottom: 30rpx;">
       <van-button type="primary" bind:click="handleButtonClick3">地图功能引导弹窗</van-button>
+    </view>
+    <view>
+      <van-button type="primary" bind:click="handleButtonClick4">通知权限弹窗</van-button>
     </view>
   </van-cell-group>
 </view>

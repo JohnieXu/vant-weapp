@@ -170,4 +170,7 @@ Page({
       return
     }
   },
+  handleButtonClick4: function () {
+    this.showDialog(4)
+  },
 })
