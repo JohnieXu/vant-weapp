@@ -89,3 +89,40 @@
   height: 360rpx;
   padding-bottom: 40px;
 }
+
+.dialog-index--dialog-7 {
+  --dialog-border-radius: 8px;
+  --dialog-header-padding-top: 20px;
+}
+
+.dialog-index--dialog-7 .title {
+  text-align: left;
+  padding: 0 15px;
+}
+
+.dialog-index--dialog-7 .wrapper {
+  padding: 20px 0;
+}
+
+.dialog-index--dialog-7 .wrapper .dialog-button {
+  border: none;
+  justify-content: flex-start;
+}
+
+.dialog-index--dialog-7 .wrapper .image {
+  width: 20px;
+  height: 28px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.dialog-index--dialog-7 .wrapper .text {
+  vertical-align: middle;
+}
+
+.dialog-index--dialog-7 .wrapper .image-right {
+  width: 22px;
+  height: 12px;
+  margin-left: 4px;
+  vertical-align: middle;
+}

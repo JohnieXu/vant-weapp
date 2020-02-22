@@ -66,6 +66,48 @@
     </view>
   </van-dialog>
 
+  <van-dialog
+    id="van-dialog-5"
+
+  >
+  
+  </van-dialog>
+
+  <van-dialog
+    id="van-dialog-6"
+    use-slot
+    use-title-slot
+  ></van-dialog>
+
+  <van-dialog
+    id="van-dialog-7"
+    use-slot
+    use-title-slot
+  >
+    <view slot="title" class="title">更换背景</view>
+    <view class="wrapper">
+      <van-button custom-class="dialog-button" block>
+        <image class="image" src="https://tva1.sinaimg.cn/large/0082zybply1gc59arkutjj301o020mwx.jpg" mode="aspectFit" />
+        <text>单张封面</text>
+      </van-button>
+      <van-button custom-class="dialog-button" block>
+        <image class="image" src="https://tva1.sinaimg.cn/large/0082zybply1gc59wai8kij301o020t8h.jpg" mode="aspectFit" />
+        <text class="text">多张封面</text>
+        <image class="image-right" src="https://tva1.sinaimg.cn/large/0082zybply1gc59bt5977j30dy07gweb.jpg" />
+      </van-button>
+      <van-button custom-class="dialog-button" block>
+        <image class="image" src="https://tva1.sinaimg.cn/large/0082zybply1gc59wr0bzjj301o020q2p.jpg" mode="aspectFit" />
+        <text class="text">视频封面</text>
+        <image class="image-right" src="https://tva1.sinaimg.cn/large/0082zybply1gc59bt5977j30dy07gweb.jpg" />
+      </van-button>
+      <van-button custom-class="dialog-button" block>
+        <image class="image" src="https://tva1.sinaimg.cn/large/0082zybply1gc59xbr21fj301o020dfl.jpg" mode="aspectFit" />
+        <text class="text">全屏背景</text>
+        <image class="image-right" src="https://tva1.sinaimg.cn/large/0082zybply1gc59bt5977j30dy07gweb.jpg" />
+      </van-button>
+    </view>
+  </van-dialog>
+
   <van-cell-group title="B站弹窗" border="{{ false }}" custom-class="cell-group__content theme-bilibili">
     <view>
       <van-button type="primary" bind:click="handleButtonClick1">青少年模式提示</van-button>
@@ -80,6 +122,15 @@
     </view>
     <view>
       <van-button type="primary" bind:click="handleButtonClick4">通知权限弹窗</van-button>
+    </view>
+  </van-cell-group>
+  <van-cell-group title="网易云音乐" border="{{ false }}" custom-class="cell-group__content theme-netmusic">
+    <view style="margin-bottom: 30rpx;">
+      <van-button type="primary" bind:click="handleButtonClick5" style="margin-right: 15rpx;">播放列表</van-button>
+      <van-button type="primary" bind:click="handleButtonClick6">歌曲分享</van-button>
+    </view>
+    <view style="margin-bottom: 30rpx;">
+      <van-button type="primary" bind:click="handleButtonClick7">更换背景</van-button>
     </view>
   </van-cell-group>
 </view>

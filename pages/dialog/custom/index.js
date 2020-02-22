@@ -173,4 +173,19 @@ Page({
   handleButtonClick4: function () {
     this.showDialog(4)
   },
+
+  handleButtonClick5: function () {
+    
+  },
+  handleButtonClick6: function () {
+
+  },
+  handleButtonClick7: function () {
+    Dialog({
+      selector: '#van-dialog-7',
+      className: 'dialog-7',
+      showConfirmButton: false,
+      closeOnClickOverlay: true
+    })
+  },
 })
