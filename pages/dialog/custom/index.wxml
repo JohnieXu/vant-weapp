@@ -66,12 +66,46 @@
     </view>
   </van-dialog>
 
-  <van-dialog
-    id="van-dialog-5"
-
+  <van-popup
+    show="{{ showPopup1 }}"
+    position="bottom"
+    custom-class="popup1"
+    bind:close="handlePopupClose1"
+    custom-style="height: 50%; background: transparent;"
+    close-on-click-overlay
   >
-  
-  </van-dialog>
+    <view class="wrapper" style="height: 100%;">
+      <swiper
+        wx:if="{{ popup1.list && popup1.list.length }}"
+        current="{{ popup1.current }}"
+        style="height: 100%;"
+        indicator-color="#838383"
+        indicator-active-color="#E3E3E3"
+        previous-margin="20px"
+        next-margin="20px"
+        bindchange="handlePopupChange1"
+        indicator-dots
+      >
+        <block wx:for="{{ popup1.list }}" wx:key="title">
+          <swiper-item>
+            <view class="{{ popup1.current === index ? 'swiper-item__content active' : 'swiper-item__content' }}" style="width: 98%; margin: auto; background: #fff; height: 100%;">
+              <view class="title">{{ item.title }}<text class="title__sub">({{ item.list.length }})</text></view>
+              <scroll-view scroll-y style="height: 100%;">
+                <block wx:if="{{ item.list && item.list.length }}">
+                  <view wx:for="{{ item.list }}" wx:for-item="music" wx:key="id" class="{{ item.activeId === music.id ? 'list-item active' : 'list-item' }}">
+                    <view class="text van-ellipsis">
+                      <text>{{ music.name }}</text>-<text>{{ music.singer }}</text>
+                    </view>
+                    <van-icon size="18" name="cross" class="icon" color="#ABABAB" />
+                  </view>
+                </block>
+              </scroll-view>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </van-popup>
 
   <van-dialog
     id="van-dialog-6"

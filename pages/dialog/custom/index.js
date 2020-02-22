@@ -10,6 +10,242 @@ Page({
     dialog3: {
       current: 0,
       confirmButtonText: '继续'
+    },
+    popup1: {
+      current: 2,
+      list: [
+        {
+          title: '最近播放',
+          list: [
+            {
+              id: 1,
+              name: '得不到你',
+              singer: '隔壁老樊'
+            },
+            {
+              id: 2,
+              name: '东西',
+              singer: '纳豆'
+            },
+            {
+              id: 3,
+              name: '我的世界',
+              singer: '陈姿彤'
+            },
+            {
+              id: 4,
+              name: '猜一猜（网剧《致我们暖暖的小时光》）',
+              singer: '何曼婷'
+            },
+            {
+              id: 5,
+              name: '云烟成雨',
+              singer: '房东的猫'
+            },
+            {
+              id: 6,
+              name: '像我这样的人',
+              singer: '毛不易'
+            },
+            {
+              id: 7,
+              name: '年少有为',
+              singer: '毛不易'
+            },
+            {
+              id: 8,
+              name: '红梅花儿开',
+              singer: '毛不易'
+            },
+            {
+              id: 9,
+              name: '人间不值得',
+              singer: '黄诗扶'
+            },
+            {
+              id: 10,
+              name: '梦一场',
+              singer: '萧敬腾'
+            },
+            {
+              id: 11,
+              name: '得不到你',
+              singer: '隔壁老樊'
+            },
+            {
+              id: 12,
+              name: '东西',
+              singer: '纳豆'
+            },
+            {
+              id: 13,
+              name: '我的世界',
+              singer: '陈姿彤'
+            },
+            {
+              id: 14,
+              name: '猜一猜（网剧《致我们暖暖的小时光》）',
+              singer: '何曼婷'
+            },
+            {
+              id: 15,
+              name: '云烟成雨',
+              singer: '房东的猫'
+            },
+            {
+              id: 16,
+              name: '像我这样的人',
+              singer: '毛不易'
+            },
+            {
+              id: 17,
+              name: '年少有为',
+              singer: '毛不易'
+            },
+            {
+              id: 18,
+              name: '红梅花儿开',
+              singer: '毛不易'
+            },
+          ]
+        },
+        {
+          title: '上次播放',
+          list: [
+            {
+              id: 1,
+              name: '得不到你',
+              singer: '隔壁老樊'
+            },
+            {
+              id: 2,
+              name: '东西',
+              singer: '纳豆'
+            },
+            {
+              id: 3,
+              name: '我的世界',
+              singer: '陈姿彤'
+            },
+            {
+              id: 4,
+              name: '猜一猜（网剧《致我们暖暖的小时光》）',
+              singer: '何曼婷'
+            },
+            {
+              id: 5,
+              name: '云烟成雨',
+              singer: '房东的猫'
+            },
+            {
+              id: 6,
+              name: '像我这样的人',
+              singer: '毛不易'
+            },
+            {
+              id: 7,
+              name: '年少有为',
+              singer: '毛不易'
+            },
+            {
+              id: 8,
+              name: '红梅花儿开',
+              singer: '毛不易'
+            },
+            {
+              id: 9,
+              name: '人间不值得',
+              singer: '黄诗扶'
+            },
+            {
+              id: 10,
+              name: '梦一场',
+              singer: '萧敬腾'
+            },
+            {
+              id: 11,
+              name: '云烟成雨',
+              singer: '房东的猫'
+            },
+            {
+              id: 12,
+              name: '像我这样的人',
+              singer: '毛不易'
+            },
+          ]
+        },
+        {
+          title: '当前播放',
+          activeId: 4,
+          list: [
+            {
+              id: 1,
+              name: '得不到你',
+              singer: '隔壁老樊'
+            },
+            {
+              id: 2,
+              name: '东西',
+              singer: '纳豆'
+            },
+            {
+              id: 3,
+              name: '我的世界',
+              singer: '陈姿彤'
+            },
+            {
+              id: 4,
+              name: '猜一猜（网剧《致我们暖暖的小时光》）',
+              singer: '何曼婷'
+            },
+            {
+              id: 5,
+              name: '云烟成雨',
+              singer: '房东的猫'
+            },
+            {
+              id: 6,
+              name: '像我这样的人',
+              singer: '毛不易'
+            },
+            {
+              id: 7,
+              name: '年少有为',
+              singer: '毛不易'
+            },
+            {
+              id: 8,
+              name: '红梅花儿开',
+              singer: '毛不易'
+            },
+            {
+              id: 9,
+              name: '人间不值得',
+              singer: '黄诗扶'
+            },
+            {
+              id: 10,
+              name: '梦一场',
+              singer: '萧敬腾'
+            },
+            {
+              id: 11,
+              name: '红梅花儿开',
+              singer: '毛不易'
+            },
+            {
+              id: 12,
+              name: '人间不值得',
+              singer: '黄诗扶'
+            },
+            {
+              id: 13,
+              name: '梦一场',
+              singer: '萧敬腾'
+            },
+          ]
+        }
+      ]
     }
   },
 
@@ -78,6 +314,18 @@ Page({
   closeDialog: function (index) {
     this.setData({
       [`showDialog${index}`]: false
+    })
+  },
+
+  showPopup: function (index) {
+    this.setData({
+      [`showPopup${index}`]: true
+    })
+  },
+
+  closePopup: function (index) {
+    this.setData({
+      [`showPopup${index}`]: false
     })
   },
 
@@ -175,10 +423,22 @@ Page({
   },
 
   handleButtonClick5: function () {
-    
+    this.showPopup(1)
+  },
+  handlePopupClose1: function () {
+    this.closePopup(1)
+  },
+  handlePopupChange1: function (e) {
+    if (e.detail.source !== 'touch') { return }
+    this.setData({
+      popup1: {
+        ...this.data.popup1,
+        current: e.detail.current
+      }
+    })
   },
   handleButtonClick6: function () {
-
+    this.showPopup(2)
   },
   handleButtonClick7: function () {
     Dialog({
