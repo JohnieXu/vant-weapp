@@ -66,6 +66,7 @@
     </view>
   </van-dialog>
 
+  <!-- 网易云音乐播放列表 -->
   <van-popup
     show="{{ showPopup1 }}"
     position="bottom"
@@ -104,6 +105,37 @@
           </swiper-item>
         </block>
       </swiper>
+    </view>
+  </van-popup>
+
+  <van-popup
+    show="{{ showPopup2 }}"
+    position="bottom"
+    custom-class="popup2"
+    bind:close="handlePopupClose2"
+    custom-style="height: 100%;"
+    close-icon="close"
+    close-on-clic-overlay
+    closeable
+  >
+    <view class="wrapper" style="height: 100%;">
+      <view class="header">
+        <image class="header-image" src="https://tva1.sinaimg.cn/large/0082zybply1gc6ph3yqkcj30pw02iwfr.jpg" mode="aspectFit" />
+      </view>
+      <image class="share-image" src="{{ popup2.shareImage }}" mode="aspectFit" />
+      <view class="footer">
+        <view class="footer__title">分享</view>
+        <view class="footer__list-wrapper">
+          <scroll-view class="footer__list" style="width: {{ popup2.shareChannels.length * 240 }}rpx; min-width: 750rpx;" scroll-x>
+            <view class="footer__list-item" wx:for="{{ popup2.shareChannels }}">
+              <view class="wrapper">
+                <image class="image" src="{{ item.icon }}" />
+                <view class="text">{{ item.name }}</view>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
     </view>
   </van-popup>
 

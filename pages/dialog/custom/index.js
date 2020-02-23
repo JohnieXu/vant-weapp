@@ -246,6 +246,40 @@ Page({
           ]
         }
       ]
+    },
+    popup2: {
+      shareImage: 'https://tva1.sinaimg.cn/large/0082zybpgy1gc6ozdm0xaj30j80wujv9.jpg',
+      // shareImage: 'https://tva1.sinaimg.cn/large/0082zybply1gc6pybpui3j30fc0zwwfa.jpg',
+      shareChannels: [
+        {
+          name: '微信朋友圈',
+          icon: '',
+        },
+        {
+          name: '微信好友',
+          icon: '',
+        },
+        {
+          name: 'QQ空间',
+          icon: '',
+        },
+        {
+          name: 'QQ好友',
+          icon: '',
+        },
+        {
+          name: '微博',
+          icon: '',
+        },
+        {
+          name: '易信',
+          icon: '',
+        },
+        {
+          name: '更多',
+          icon: ''
+        },
+      ]
     }
   },
 
@@ -439,6 +473,9 @@ Page({
   },
   handleButtonClick6: function () {
     this.showPopup(2)
+  },
+  handlePopupClose2: function () {
+    this.closePopup(2)
   },
   handleButtonClick7: function () {
     Dialog({
