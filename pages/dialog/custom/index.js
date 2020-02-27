@@ -280,6 +280,20 @@ Page({
           icon: ''
         },
       ]
+    },
+    popup3: {
+      updateinfo: {},
+      detail: `<div>
+        <div class="title">详情</div>
+        <p class="p">【本次更新】</p>
+        <p class="p">- 优化了一些体验上的问题</p>
+        <p class="p">【近期更新】</p>
+        <p class="p">- 全新词典首页，好功能好内容，一步到位~</p>
+        <p class="p">【本次更新】</p>
+        <p class="p">- 优化了一些体验上的问题</p>
+        <p class="p">【近期更新】</p>
+        <p class="p">- 全新词典首页，好功能好内容，一步到位~</p>
+      </div>`
     }
   },
 
@@ -484,5 +498,14 @@ Page({
       showConfirmButton: false,
       closeOnClickOverlay: true
     })
+  },
+  handleButtonClick8: function () {
+    this.showPopup(3)
+  },
+  handleButtonClik9: function () {
+    this.closePopup(3)
+  },
+  handleButtonClik10: function () {
+    this.closePopup(3)
   },
 })

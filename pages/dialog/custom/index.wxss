@@ -265,3 +265,75 @@
   width: 200rpx;
   height: 200rpx;
 }
+
+.popup3 {
+  --popup-background-color: transparent;
+  bottom: 20px!important;
+  height: 260px!important;
+}
+
+.popup3 .title {
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.popup3 .info {
+  color: '#000000';
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.popup3 .info__item {
+  margin-bottom: 3px;
+}
+
+.popup3 .info__item .label {
+  margin-right: 5px;
+  color: '#7F7F7F';
+}
+
+.popup3 .content {
+  height: 100%;
+  margin: 0 20px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.popup3 .content .richtext .title {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-weight: 400;
+  font-size: 15px;
+  color: 292929;
+}
+
+.popup3 .content .richtext .p {
+  margin-top: 3px;
+  font-size: 13px;
+  color: #7F7F7F;
+}
+
+.popup3 .footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  left: 0;
+}
+
+.popup3 .footer .footer__button--noborder {
+  border-color: transparent!important;
+}
+
+.popup3 .footer .footer__button {
+  flex: 1;
+  padding: 0 24px;
+  text-align: center;
+}

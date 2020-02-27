@@ -139,6 +139,46 @@
     </view>
   </van-popup>
 
+  <van-popup
+    show="{{ showPopup3 }}"
+    position="bottom"
+    custom-class="popup3"
+    bind:close="handlePopupClose3"
+    custom-style="height: 40%"
+    close-on-click-overlay="{{ false }}"
+  >
+    <view class="wrapper" style="height: 100%;">
+      <view class="content">
+        <view class="title">发现新版本</view>
+        <scroll-view style="height: 150px;" scroll-y>
+          <view class="info">
+            <view class="info__item"><text class="label">应用</text><text class="value">网易有道词典</text></view>
+            <view class="info__item"><text class="label">版本</text><text class="value">8.1.4</text></view>
+            <view class="info__item"><text class="label">大小</text><text class="value">112.3MB</text></view>
+          </view>
+          <view class="detail">
+            <rich-text class="richtext" nodes="{{ popup3.detail }}" space="npsp"></rich-text>
+          </view>
+        </scroll-view>
+        <view class="footer">
+          <van-button
+            custom-class="footer__button footer__button--noborder"
+            color="#4AB0F9"
+            bind:click="handleButtonClik9"
+            plain
+          >以后再说</van-button>
+          <van-button
+            custom-class="footer__button"
+            type="info"
+            color="#2D7EF6"
+            bind:click="handleButtonClik10"
+            round
+          >立即更新</van-button>
+        </view>
+      </view>
+    </view>
+  </van-popup>
+
   <van-dialog
     id="van-dialog-6"
     use-slot
@@ -195,8 +235,21 @@
       <van-button type="primary" bind:click="handleButtonClick5" style="margin-right: 15rpx;">播放列表</van-button>
       <van-button type="primary" bind:click="handleButtonClick6">歌曲分享</van-button>
     </view>
-    <view style="margin-bottom: 30rpx;">
+    <view>
       <van-button type="primary" bind:click="handleButtonClick7">更换背景</van-button>
+    </view>
+  </van-cell-group>
+  <van-cell-group title="应用升级提示" border="{{ false }}" custom-class="cell-group__content theme-update">
+    <view style="margin-bottom: 30rpx;">
+      <van-panel
+        title="有道词典"
+        desc="Dialog控制显示位置与动画+scroll-view控制升级提示内容，定义底部取消和确定升级按钮"
+        use-footer-slot
+      >
+        <view slot="footer" style="text-align: right;">
+          <van-button size="small" type="primary" bind:click="handleButtonClick8">打开</van-button>
+        </view>
+      </van-panel>
     </view>
   </van-cell-group>
 </view>

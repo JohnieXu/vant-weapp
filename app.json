@@ -31,6 +31,7 @@
     "van-checkbox-group": "@vant/weapp/checkbox-group",
     "van-dialog": "@vant/weapp/dialog",
     "van-popup": "@vant/weapp/popup",
+    "van-panel": "@vant/weapp/panel",
     "van-divider": "@vant/weapp/divider",
     "van-grid": "@vant/weapp/grid",
     "van-grid-item": "@vant/weapp/grid-item",
