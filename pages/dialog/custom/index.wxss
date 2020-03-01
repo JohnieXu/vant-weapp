@@ -361,6 +361,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
+  overflow-y: hidden!important;
 }
 
 .dialog-index--dialog-8 .title {

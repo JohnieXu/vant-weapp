@@ -258,7 +258,7 @@
     <view style="margin-bottom: 20rpx;">
       <van-panel
         title="播放列表"
-        desc="Popup+Swiper轮播列表+自定义轮播列表样式"
+        desc="Popup+Swiper轮播列表+自定义轮播列表样式+ScrollView控制歌单列表竖向滚动"
         use-footer-slot
       >
         <view slot="footer" style="text-align: right;">
