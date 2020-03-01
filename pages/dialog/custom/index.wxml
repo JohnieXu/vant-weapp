@@ -108,6 +108,7 @@
     </view>
   </van-popup>
 
+  <!-- 网易云音乐分享 -->
   <van-popup
     show="{{ showPopup2 }}"
     position="bottom"
@@ -126,8 +127,8 @@
       <view class="footer">
         <view class="footer__title">分享</view>
         <view class="footer__list-wrapper">
-          <scroll-view class="footer__list" style="width: {{ popup2.shareChannels.length * 240 }}rpx; min-width: 750rpx;" scroll-x>
-            <view class="footer__list-item" wx:for="{{ popup2.shareChannels }}">
+          <scroll-view class="footer__list" style="width: {{ popup2.shareChannels.length * 180 }}rpx; min-width: 750rpx;" scroll-x>
+            <view class="footer__list-item" hover-class="footer__list-item--active" wx:for="{{ popup2.shareChannels }}">
               <view class="wrapper">
                 <image class="image" src="{{ item.icon }}" />
                 <view class="text">{{ item.name }}</view>
@@ -139,6 +140,7 @@
     </view>
   </van-popup>
 
+  <!-- 有道词典更新提示 -->
   <van-popup
     show="{{ showPopup3 }}"
     position="bottom"
@@ -253,16 +255,42 @@
     </view>
   </van-cell-group>
   <van-cell-group title="网易云音乐" border="{{ false }}" custom-class="cell-group__content theme-netmusic">
-    <view style="margin-bottom: 30rpx;">
-      <van-button type="primary" bind:click="handleButtonClick5" style="margin-right: 15rpx;">播放列表</van-button>
-      <van-button type="primary" bind:click="handleButtonClick6">歌曲分享</van-button>
+    <view style="margin-bottom: 20rpx;">
+      <van-panel
+        title="播放列表"
+        desc="Popup+Swiper轮播列表+自定义轮播列表样式"
+        use-footer-slot
+      >
+        <view slot="footer" style="text-align: right;">
+          <van-button size="small" type="primary" bind:click="handleButtonClick5">打开</van-button>
+        </view>
+      </van-panel>
+    </view>
+    <view style="margin-bottom: 20rpx;">
+      <van-panel
+        title="歌曲分享"
+        desc="Popup全屏高度+底部固定ScrollView横向滚动"
+        use-footer-slot
+      >
+        <view slot="footer" style="text-align: right;">
+          <van-button size="small" type="primary" bind:click="handleButtonClick6">打开</van-button>
+        </view>
+      </van-panel>
     </view>
     <view>
-      <van-button type="primary" bind:click="handleButtonClick7">更换背景</van-button>
+      <van-panel
+        title="更换背景"
+        desc="Popup中心显示+带有多个数排按钮列表"
+        use-footer-slot
+      >
+        <view slot="footer" style="text-align: right;">
+          <van-button size="small" type="primary" bind:click="handleButtonClick7">打开</van-button>
+        </view>
+      </van-panel>
     </view>
   </van-cell-group>
   <van-cell-group title="应用升级提示" border="{{ false }}" custom-class="cell-group__content theme-update">
-    <view style="margin-bottom: 30rpx;">
+    <view style="margin-bottom: 20rpx;">
       <van-panel
         title="有道词典"
         desc="Popup+scroll-view控制升级提示内容，定义底部取消和确定升级按钮"
@@ -273,7 +301,7 @@
         </view>
       </van-panel>
     </view>
-    <view style="margin-bottom: 30rpx;">
+    <view style="margin-bottom: 20rpx;">
       <van-panel
         title="12306"
         desc="Dialog+background-image定义弹窗背景+自定义底部确定取消按钮"

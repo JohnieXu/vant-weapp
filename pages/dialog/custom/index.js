@@ -253,31 +253,31 @@ Page({
       shareChannels: [
         {
           name: '微信朋友圈',
-          icon: '',
+          icon: 'https://tva1.sinaimg.cn/large/00831rSTly1gcel7v15amj3041041q2t',
         },
         {
           name: '微信好友',
-          icon: '',
+          icon: 'https://tva1.sinaimg.cn/large/00831rSTly1gcel7uqtc9j30410400sm',
         },
         {
           name: 'QQ空间',
-          icon: '',
+          icon: 'https://tva1.sinaimg.cn/large/00831rSTly1gcel7ulborj3041041dfp',
         },
         {
           name: 'QQ好友',
-          icon: '',
+          icon: 'https://tva1.sinaimg.cn/large/00831rSTly1gcel7v9ji4j3041041wec',
         },
         {
           name: '微博',
-          icon: '',
+          icon: 'https://tva1.sinaimg.cn/large/00831rSTly1gcel7v5uc8j3041041gli',
         },
         {
           name: '易信',
-          icon: '',
+          icon: 'https://tva1.sinaimg.cn/large/00831rSTly1gcel7v9ji4j3041041wec',
         },
         {
           name: '更多',
-          icon: ''
+          icon: 'https://tva1.sinaimg.cn/large/00831rSTly1gcel7v5uc8j3041041gli'
         },
       ]
     },
