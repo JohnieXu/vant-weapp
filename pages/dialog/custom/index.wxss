@@ -337,3 +337,40 @@
   padding: 0 24px;
   text-align: center;
 }
+
+.dialog-index--dialog-8 {
+  --dialog-border-radius: 6px!important;
+  --dialog-width: 300px;
+  --dialog-small-screen-width: 75%;
+  --button-default-background-color: transparent;
+  background-image: url('https://tva1.sinaimg.cn/large/00831rSTly1gceimt3047j30ll0duq32.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.dialog-index--dialog-8 .title {
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.dialog-index--dialog-8 .content {
+  margin: 20px auto;
+  color: #548BC8;
+}
+
+.dialog-index--dialog-8 .wrapper {
+  padding-bottom: 25px;
+}
+
+.dialog-index--dialog-8 .wrapper .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.dialog-index--dialog-8 .wrapper .button {
+  padding: 0 20px;
+  height: 40px;
+  border-radius: 6px;
+}

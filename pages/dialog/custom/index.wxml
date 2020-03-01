@@ -214,6 +214,28 @@
     </view>
   </van-dialog>
 
+  <van-dialog
+    id="van-dialog-8"
+    class-name="dialog-8"
+    show="{{ showDialog8 }}"
+    show-cancel-button="{{ false }}"
+    show-confirm-button="{{ false }}"
+    cancel-button-text="稍后再说"
+    confirm-button-text="现在安装"
+    use-slot
+    use-title-slot
+  >
+    <view slot="title" class="title">版本升级</view>
+    <view class="wrapper">
+      <image wx:if="{{ fasle }}" src="https://tva1.sinaimg.cn/large/00831rSTly1gceimt3047j30ll0duq32.jpg" mode="aspectFit" />
+      <view class="content">欢迎使用新版本</view>
+      <view class="buttons">
+        <van-button custom-class="button" type="info" size="small" bind:click="handleButtonClick12" plain>稍后再说</van-button>
+        <van-button custom-class="button" type="info" size="small" bind:click="handleButtonClick13">现在安装</van-button>
+      </view>
+    </view>
+  </van-dialog>
+
   <van-cell-group title="B站弹窗" border="{{ false }}" custom-class="cell-group__content theme-bilibili">
     <view>
       <van-button type="primary" bind:click="handleButtonClick1">青少年模式提示</van-button>
@@ -243,11 +265,22 @@
     <view style="margin-bottom: 30rpx;">
       <van-panel
         title="有道词典"
-        desc="Dialog控制显示位置与动画+scroll-view控制升级提示内容，定义底部取消和确定升级按钮"
+        desc="Popup+scroll-view控制升级提示内容，定义底部取消和确定升级按钮"
         use-footer-slot
       >
         <view slot="footer" style="text-align: right;">
           <van-button size="small" type="primary" bind:click="handleButtonClick8">打开</van-button>
+        </view>
+      </van-panel>
+    </view>
+    <view style="margin-bottom: 30rpx;">
+      <van-panel
+        title="12306"
+        desc="Dialog+background-image定义弹窗背景+自定义底部确定取消按钮"
+        use-footer-slot
+      >
+        <view slot="footer" style="text-align: right;">
+          <van-button size="small" type="primary" bind:click="handleButtonClick11">打开</van-button>
         </view>
       </van-panel>
     </view>

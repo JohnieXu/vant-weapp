@@ -508,4 +508,13 @@ Page({
   handleButtonClik10: function () {
     this.closePopup(3)
   },
+  handleButtonClick11: function () {
+    this.showDialog(8)
+  },
+  handleButtonClick12: function () {
+    this.closeDialog(8)
+  },
+  handleButtonClick13: function () {
+    this.closeDialog(8)
+  },
 })
