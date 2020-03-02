@@ -419,10 +419,9 @@ Page({
 
   // 地图功能引导弹窗sipwerchange
   onDialog3SwiperChange: function (e) {
-    console.log(e)
     this.setData({
       dialog3: {
-        ...this.data.dialog3,
+        // ...this.data.dialog3,
         current: e.detail.current,
         confirmButtonText: e.detail.current === 0 ? '继续' : '知道了'
       }
@@ -468,6 +467,14 @@ Page({
   },
   handleButtonClick4: function () {
     this.showDialog(4)
+  },
+
+  handleDialog4Confirm: function () {
+    this.closeDialog(4)
+  },
+
+  handleDialog4Cancel: function () {
+    this.closeDialog(4)
   },
 
   handleButtonClick5: function () {

@@ -49,6 +49,8 @@
     cancel-button-text="暂不设置"
     cancel-button-color="#6C6C6C"
     confirm-button-text="去设置"
+    bind:confirm="handleDialog4Confirm"
+    bind:cancel="handleDialog4Cancel"
     use-slot
     use-title-slot
   >
