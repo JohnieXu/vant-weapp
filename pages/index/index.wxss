@@ -1,71 +1,77 @@
 /**index.wxss**/
-.user {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 20rpx;
-}
-.user .user__name {
-  flex: 1;
-  font-size: 32rpx;
+.image-background {
+  background-image: url(https://tva1.sinaimg.cn/large/00831rSTly1gclpyq2et0j30ku0uxmxv.jpg);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #fff;
 }
 
-.user .user__setting {
-  flex: 1;
-  text-align: right;
-  font-size: 28rpx;
+.module {
+  /* margin: 30rpx; */
+  margin-top: 60rpx;
+  margin-bottom: 60rpx;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 40rpx;
+  grid-row-gap: 40rpx;
 }
 
-.user .user__setting .more {
-  vertical-align: middle;
-}
-
-.card {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 30rpx;
-  margin-bottom: 20rpx;
-  align-items: center;
-  text-align: center;
-  background: #fff;
+.module .module-item {
+  background: rgba(101, 101, 101, 0.3);
   border-radius: 10rpx;
-  box-shadow: 0 0 6rpx 6rpx rgba(200, 200, 200, 0.3);
+  text-align: center;
+  color: #333333;
+  font-size: 40rpx;
+  padding: 75rpx 104rpx;
+  transition: background ease 0.1s;
 }
 
-.card .left {
+.module .module-item--active {
+  background: rgba(40, 40, 40, 0.3);
+}
+
+.subscription {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* margin: 30rpx; */
+  margin-top: 80rpx;
+  background: rgba(200,200,200,0.2);
+  padding: 30rpx;
+}
+
+.subscription .flex__left {
+  flex: 0 0 86rpx;
+}
+
+.subscription .flex__right {
   flex: 1;
+  margin-left: 10rpx;
 }
 
-.card .right {
-  flex: 1;
+.subscription .flex__right .title {
+  display: inline-block;
+  line-height: 37rpx;
+  font-size: 20rpx;
+  color: #333;
+  vertical-align: top;
 }
 
-.card .title {
-  font-size: 22rpx;
-  color: #ccc;
-  margin-bottom: 20rpx;
+.subscription .flex__right .slogan {
+  font-size: 20rpx;
+  color: #666;
 }
 
-.card .button {
-  font-weight: 300;
+.subscription .image__qrcode {
+  width: 86rpx;
+  height: 86rpx;
 }
 
-.card .collect__total {
-  font-size: 22rpx;
-}
-
-.card .collect__total .money {
-  margin-left: 6rpx;
-  font-size: 34rpx;
-}
-
-.card .left__total {
-  font-size: 22rpx;
-}
-
-.card .left__total .money {
-  margin-left: 6rpx;
-  font-size: 34rpx;
+.subscription .image__wechat-icon {
+  width: 37rpx;
+  height: 37rpx;
+  vertical-align: top;
 }

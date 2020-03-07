@@ -1,35 +1,23 @@
 <!--index.wxml-->
-<view class="container">
+<view class="container image-background">
   <van-toast id="van-toast" />
-  <view class="user">
-    <view class="user__name">{{username}}</view>
-    <view class="user__setting">
-      <text class="more" bind:tap="bindMoreTap">更多</text>
-      <van-icon style="vertical-align: middle;" name="arrow" />
+  <view class="module" bindtap="handleModuleTap">
+    <view wx:for="{{ modules }}" class="module-item" hover-class="module-item--active" data-title="{{ item.title }}">
+      <view class="title" data-title="{{ item.title }}">{{ item.title }}</view>
     </view>
   </view>
-  <view class="card">
-    <view class="left van-hairline--right">
-      <view class="title">今日收款{{0}}笔</view>
-      <view class="collect__total">¥<text class="money">{{'0.00'}}</text></view>
-      <van-button plain hairline size="mini" type="info" custom-class="button">查看明细</van-button>
+  <view wx:if="{{ false }}" class="subscription">
+    <image class="flex__left image__qrcode" src="{{ subscription.qrcode }}" width="86" height="86" mode="aspectFit"></image>
+    <view class="flex__right">
+      <view>
+        <image class="image__wechat-icon" src="{{ wechatIcon }}" width="37" height="37" mode="aspectFit"></image>
+        <text class="title">迪诺笔记</text>
+      </view>
+      <view class="slogan">{{ subscription.slogan }}</view>
     </view>
-    <view class="right">
-      <view class="title">余额</view>
-      <view class="left__total">¥<text class="money">{{'0.00'}}</text></view>
-      <van-button plain hairline size="mini" type="info" custom-class="button">资金管理</van-button>
+    <view class="flex__button">
+      <van-button type="info" size="mini" icon="plus" plain>关注</van-button>
     </view>
   </view>
-  <view class="service">
-    <view class="title">我的服务</view>
-    <van-grid border="{{false}}" clickable square>
-      <van-grid-item icon="photo-o" text="我的商户" url="/pages/merchant/merchant"></van-grid-item>
-      <van-grid-item icon="photo-o" text="收钱设备" url="/pages/device/index"></van-grid-item>
-      <van-grid-item icon="photo-o" text="收入统计" url="/pages/income/income" dot></van-grid-item>
-      <van-grid-item icon="photo-o" text="代理统计" url="/pages/agent/agent"></van-grid-item>
-      <van-grid-item icon="photo-o" text="商户入驻" url="/pages/merchant/apply"></van-grid-item>
-      <van-grid-item icon="photo-o" text="对话框" url="/pages/dialog/index/index"></van-grid-item>
-      <van-grid-item icon="photo-o" text="更多"></van-grid-item>
-    </van-grid>
-  </view>
+  <official-account style="width: 300px; height: 90px;"></official-account>
 </view>
