@@ -389,3 +389,120 @@
   height: 40px;
   border-radius: 6px;
 }
+
+.dialog-index--dialog-9 {
+  --dialog-width: 60%; /* 弹窗宽度 */
+  --popup-background-color: transparent; /* 弹窗背景透明 */
+  --button-default-background-color: #DF4F57;
+  --button-default-border-color: #DF4F57;
+  --button-default-color: #fff;
+}
+
+.dialog-index--dialog-9 .van-button--default {
+  border-radius: 50rpx!important;
+  padding: 0 50rpx;
+}
+
+.dialog-index--dialog-9 .van-dialog__header,
+.dialog-index--dialog-9 .van-dialog__footer {
+  display: none!important; /* 隐藏组件自带的header与footer */
+}
+
+.dialog-index--dialog-9 .wrapper {
+  text-align: center;
+}
+
+.dialog-index--dialog-9 .wrapper .content__title {
+  text-align: center;
+}
+
+.dialog-index--dialog-9 .wrapper .content__title-text {
+  font-size: 37rpx;
+  line-height: 40rpx;
+  vertical-align: middle;
+  font-weight: bold;
+  color: #fff;
+}
+
+.dialog-index--dialog-9 .wrapper .content__title-image {
+  vertical-align: middle;
+}
+
+.dialog-index--dialog-9 .wrapper .content__second .box {
+  margin-bottom: 60rpx; 
+}
+
+.dialog-index--dialog-9 .wrapper .content__second .title {
+  font-weight: bold;
+  font-size: 37.5rpx;
+  text-align: center;
+}
+
+.dialog-index--dialog-9 .wrapper .content__second .description {
+  font-size: 20rpx;
+  text-align: center;
+  color: #757575;
+  padding-top: 20rpx;
+}
+
+.dialog-index--dialog-9 .wrapper .content__second .goods {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 20rpx 0;
+}
+
+.dialog-index--dialog-9 .wrapper .content__second .goods--image {
+  flex: 0 0 163rpx;
+  margin-left: 20rpx;
+}
+
+.dialog-index--dialog-9 .wrapper .content__second .goods--detail {
+  flex: 1;
+  margin-left: 20rpx;
+}
+
+.dialog-index--dialog-9 .wrapper .content__second .goods--title {
+  font-size: 23.5rpx;
+  font-weight: normal;
+  color: #2f2f2f;
+}
+
+.dialog-index--dialog-9 .wrapper .content__second .goods--title {
+  font-size: 25rpx;
+  color: #2f2f2f;
+}
+
+.dialog-index--dialog-9 .wrapper .content__second .goods--price {
+  margin-top: 20rpx;
+  font-size: 52rpx;
+  font-weight: bold;
+  color: #e81a3a;
+  vertical-align: baseline;
+}
+
+.dialog-index--dialog-9 .wrapper .content__second .goods--price .prefix {
+  font-size: 38rpx;
+  vertical-align: baseline;
+}
+
+.dialog-index--dialog-9 .wrapper .content__second .goods--brand-image {
+  margin-top: 20rpx;
+  float: right;
+  margin-right: 20rpx;
+}
+
+
+.dialog-index--dialog-9 .wrapper .content__second .goods--use-limit {
+  display: inline-block;
+  margin-top: 20rpx;
+  font-size: 23.5rpx;
+  color: #b95069;
+  font-weight: normal;
+}
+
+.dialog-index--dialog-9 .wrapper .content__second .goods--description {
+
+}

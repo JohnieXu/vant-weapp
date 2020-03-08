@@ -11,6 +11,24 @@ Page({
       current: 0,
       confirmButtonText: '继续'
     },
+    dialog9: {
+      current: 1,
+      first: {
+        imageUrl: 'https://i.loli.net/2020/03/08/31c6aWj9gNtZM85.png',
+        buttonText: '立即打开',
+      },
+      second: {
+        title: 'get四季搭配法则',
+        description: '已放入卡卷包，可叠加跨店每满减',
+        goods: {
+          title: '瑞思皮尔旗舰店',
+          price: 38,
+          image: 'https://tva1.sinaimg.cn/large/00831rSTly1gcmp2ln2r5j306i06kwes.jpg',
+          brandImage: 'https://tva1.sinaimg.cn/large/00831rSTly1gcmp2rrv29j302q010wea.jpg',
+        },
+        buttonText: '去逛逛'
+      },
+    },
     popup1: {
       current: 2,
       list: [
@@ -301,7 +319,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      showDialog9: true
+    })
   },
 
   /**
@@ -509,10 +529,10 @@ Page({
   handleButtonClick8: function () {
     this.showPopup(3)
   },
-  handleButtonClik9: function () {
+  handleButtonClick9: function () {
     this.closePopup(3)
   },
-  handleButtonClik10: function () {
+  handleButtonClick10: function () {
     this.closePopup(3)
   },
   handleButtonClick11: function () {
@@ -523,5 +543,31 @@ Page({
   },
   handleButtonClick13: function () {
     this.closeDialog(8)
+  },
+  handleButtonClick14: function () {
+    this.showDialog(9)
+  },
+  handleButtonClick15: function () {
+    this.closeDialog(9)
+  },
+  handleButtonClick16: function () {
+    if (this.data.dialog9.current === 0) {
+      this.setData({
+        dialog9: {
+          ...this.data.dialog9,
+          current: 1
+        }
+      })
+    }
+  },
+  handleButtonClick17: function () {
+    this.closeDialog(9)
+    setTimeout(() => {
+      this.setData({
+        dialog9: {
+          current: 0
+        }
+      })
+    }, 20)
   },
 })

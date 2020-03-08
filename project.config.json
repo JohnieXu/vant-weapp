@@ -58,7 +58,7 @@
 				{
 					"id": 0,
 					"name": "pages/dialog/custom/index",
-					"pathName": "pages/index/index",
+					"pathName": "pages/dialog/custom/index",
 					"query": "env=dev",
 					"scene": null
 				}
