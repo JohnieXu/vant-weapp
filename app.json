@@ -13,7 +13,8 @@
     "pages/dialog/index/index",
     "pages/dialog/basic/index",
     "pages/dialog/custom/index",
-    "pages/dialog/advanced/index"
+    "pages/dialog/advanced/index",
+    "pages/yuyan/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",

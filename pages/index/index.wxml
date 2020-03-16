@@ -2,8 +2,8 @@
 <view class="container image-background">
   <van-toast id="van-toast" />
   <view class="module" bindtap="handleModuleTap">
-    <view wx:for="{{ modules }}" class="module-item" hover-class="module-item--active" data-title="{{ item.title }}">
-      <view class="title" data-title="{{ item.title }}">{{ item.title }}</view>
+    <view wx:for="{{ modules }}" class="module-item" hover-class="module-item--active" data-title="{{ item.title }}" data-url="{{ item.link }}">
+      <view class="title" data-title="{{ item.title }}" data-url="{{ item.link }}">{{ item.title }}</view>
     </view>
   </view>
   <view wx:if="{{ false }}" class="subscription">

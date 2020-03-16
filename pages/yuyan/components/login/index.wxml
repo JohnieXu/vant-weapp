@@ -1,0 +1,44 @@
+<view class="page">
+  <view class="box">
+    <view wx:if="{{ onSkip }}" bindtap="onSkipClick" class="hd" hover-class="hd--hover">
+      <text class="tag">跳过</text>
+    </view>
+    <text class="bd">欢迎登录予颜</text>
+    <form bindsubmit="onLogin">
+      <input name="phone" type="number" confirm-type="next" class="phone" placeholder="请输入手机号" valud="{{ phone }}" bindinput="onPhoneInput" focus adjust-position></input>
+      <view class="row">
+        <view class="color" />
+      </view>
+      <view class="row-1">
+        <input name="password" type="text" confirm-type="done" class="code" placeholder="请输入验证码" value="{{ password }}" bindinput="onPasswordInput" password adjust-position></input>
+        <text bindtap="onClick" class="send-verification-code">发送验证码</text>
+      </view>
+      <view class="row-2">
+        <view class="color-div" />
+      </view>
+      <view class="row-3">
+        <view class="outer">
+          <view class="color-2" />
+          <button form-type="submit" class="login-now-wrap {{ buttonDisabled ? 'disabled' : '' }}" hover-class="login-now-wrap--hover">
+            <text class="login-now">立即登录</text>
+          </button>
+        </view>
+      </view>
+      <view class="row-4">
+        <text class="info">登录即代表你已同意</text>
+        <text bindtap="onClick" class="info-2">予颜用户隐私协议</text>
+      </view>
+    </form>
+    <view class="ft">
+      <view class="col-1" hover-class="pic--hover" bindtap="onLoginOther" data-way="weibo">
+        <image src="https://lessing.oss-cn-beijing.aliyuncs.com/files/63e8bc31-c07e-498f-8957-909ce62c0ad7.png" mode="aspectFit" bindtap="onClick" class="pic" />
+      </view>
+      <view class="col-2" hover-class="img--hover" bindtap="onLoginOther" data-way="wechat">
+        <image src="https://lessing.oss-cn-beijing.aliyuncs.com/files/87c33200-2507-4672-a4fa-b431d640c320.png" mode="aspectFit" bindtap="onClick" class="img" />
+      </view>
+      <view class="col-3" hover-class="small-item--hover" bindtap="onLoginOther" data-way="email">
+        <image src="https://lessing.oss-cn-beijing.aliyuncs.com/files/83235a4a-4bca-403c-94c8-e4bce5d96b79.png" mode="aspectFit" bindtap="onClick" class="small-item" />
+      </view>
+    </view>
+  </view>
+</view>

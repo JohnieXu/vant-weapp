@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "「予颜」登录",
+  "usingComponents": {
+    "yy-login": "../components/login/index"
+  }
+}

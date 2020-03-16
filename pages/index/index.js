@@ -15,11 +15,11 @@ Page({
       },
       {
         title: '精选',
-        link: '',
+        link: '/pages/yuyan/login/login',
       },
       {
         title: 'demo',
-        link: '',
+        link: '/pages/dialog/index/index',
       },
       {
         title: '全部',
@@ -43,19 +43,18 @@ Page({
   // 模块点击
   handleModuleTap: (e) => {
     const title = e.target.dataset.title
+    const url = e.target.dataset.url
     if (!title) {
       return
     }
-    switch (title) {
-      case 'demo':
-        wx.navigateTo({
-          url: '/pages/dialog/index/index',
-        })
-        break
-      default:
-        Toast('小哥哥正在全力开发中^_^')
-        break
+    if (!title || !url) {
+      Toast('小哥哥正在全力开发中^_^')
+      return
     }
+    
+    wx.navigateTo({
+      url
+    })
   },
   // 头部更新点击
   bindMoreTap: function() {

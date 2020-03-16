@@ -13,7 +13,7 @@
   --text-color: #8C8C8C;
 }
 
-.dialog-index--dialog-1 .wrapper{
+.dialog-index--dialog-1 .wrapper {
   padding-bottom: 16px;
   text-align: center;
   color: var(--text-color, #8C8C8C);

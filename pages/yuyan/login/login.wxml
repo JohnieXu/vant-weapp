@@ -1,0 +1,2 @@
+<!--pages/yuyan/login.wxml-->
+<yy-login class="comp-login"></yy-login>

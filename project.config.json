@@ -61,6 +61,13 @@
 					"pathName": "pages/dialog/custom/index",
 					"query": "env=dev",
 					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "pages/yuyan/login/login",
+					"pathName": "pages/yuyan/login/login",
+					"query": "env=dev",
+					"scene": null
 				}
 			]
 		}
