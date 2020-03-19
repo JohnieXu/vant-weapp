@@ -64,8 +64,8 @@
 				},
 				{
 					"id": 1,
-					"name": "pages/yuyan/login/login",
-					"pathName": "pages/yuyan/login/login",
+					"name": "pages/yuyan/guide/guide",
+					"pathName": "pages/yuyan/guide/guide",
 					"query": "env=dev",
 					"scene": null
 				}

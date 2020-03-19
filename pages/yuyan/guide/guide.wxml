@@ -1,0 +1,19 @@
+<view>
+  <swiper
+    indicator-color="#ccc"
+    indicator-active-color="#82D9D9"
+    class="swiper"
+    indicator-dots
+  >
+    <swiper-item wx:for="{{ guide }}" wx:key="title" class="swiper-item">
+      <image class="image" src="{{ item.image }}"></image>
+      <view class="text">
+        <view class="title">{{ item.title }}</view>
+        <view class="desc">{{ item.desc }}</view>
+      </view>
+      <view class="button-wrapper">
+        <van-button class="button" wx:if="{{ index === 2 }}" bindtap="onButtonTap" color="#82d9d9" block round>立即体验</van-button>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

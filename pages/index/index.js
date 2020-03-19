@@ -15,7 +15,7 @@ Page({
       },
       {
         title: '精选',
-        link: '/pages/yuyan/login/login',
+        link: '/pages/yuyan/guide/guide',
       },
       {
         title: 'demo',

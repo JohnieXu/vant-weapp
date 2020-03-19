@@ -1,14 +1,9 @@
 //app.js
 App({
-  onLaunch: function (options) {
+  onLaunch(options) {
     const { query: { env = 'prod' } = {} } = options
     this.globalData.env = env
-
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
+    
     // 登录
     wx.login({
       success: res => {
@@ -36,8 +31,26 @@ App({
       }
     })
   },
+  onShow() {
+    this.getUpdate()
+  },
   globalData: {
     userInfo: null,
     env: '', // 环境变量 dev: 开发环境 test：测试环境 prod: 正式环境
+  },
+  getUpdate() {
+    const updateManager = wx.getUpdateManager()
+    updateManager.onCheckForUpdate()
+    updateManager.onUpdateReady(function() {
+      wx.showModal({
+        title: '更新提示',
+        content: '新版本已经准备好，是否重启应用？',
+        success: function(res) {
+          if (res.confirm) {
+            updateManager.applyUpdate()
+          }
+        }
+      })
+    })
   }
 })
