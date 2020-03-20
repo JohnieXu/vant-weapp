@@ -1,7 +1,7 @@
 # 基于有赞vant-weapp的小程序项目
 
 <p align="center">
-  <img src="https://tva1.sinaimg.cn/large/0082zybply1gbzjtall0xj30u00u00v2.jpg" alt="预览二维码" width="200" />
+  <img src="https://tva1.sinaimg.cn/large/00831rSTgy1gd0kr0wlwwj30by0by3yv.jpg" alt="预览二维码" width="200" />
   <p align="center" style="color: #B66112;">请用微信扫码预览</p>
 </p>
 
@@ -20,6 +20,8 @@ npm run server
 yarn
 yarn server
 ```
+
+> `yarn server`此步可以跳过，暂时不考虑用本地mock的接口服务
 
 ## 2. 进入小程序IDE
 
@@ -52,5 +54,5 @@ yarn server
 到此项目就已经成功启动，会看到项目首页如下：
 
 <p align="center">
-  <img src="https://tva1.sinaimg.cn/large/0082zybply1gbyeid5tsrj30o014i46a.jpg" alt="项目预览" width="400" />
+  <img src="https://tva1.sinaimg.cn/large/00831rSTgy1gd0kigpvzhj30r21a0jty.jpg" alt="项目预览" width="400" />
 </p>
