@@ -1,0 +1,19 @@
+/* pages/youku/index/index.wxss */
+
+page {
+  --page-background-color: #24335B;
+  --page-reverse-color: #fff;
+  background: var(--page-background-color, #24335B);
+  color: var(--page-reverse-color, #fff);
+}
+
+.header {
+  width: 100%;
+  height: 64px;
+  background: rgba(200,200,200,.5);
+}
+
+.video {
+  width: 750rpx;
+  height: 640rpx;
+}

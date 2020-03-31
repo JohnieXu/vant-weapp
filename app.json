@@ -15,7 +15,8 @@
     "pages/dialog/custom/index",
     "pages/dialog/advanced/index",
     "pages/yuyan/guide/guide",
-    "pages/yuyan/login/login"
+    "pages/yuyan/login/login",
+    "pages/youku/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -68,6 +68,20 @@
 					"pathName": "pages/yuyan/guide/guide",
 					"query": "env=dev",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "env=dev",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/youku/index/index",
+					"pathName": "pages/youku/index/index",
+					"query": "env=dev",
+					"scene": null
 				}
 			]
 		}
