@@ -1,0 +1,27 @@
+/* pages/dialog/home/index.wxss */
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  color: #333;
+  font-size: 34rpx;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-around;
+  flex: 1;
+  margin-bottom: 40rpx;
+  padding: 20rpx 50rpx;
+  background: rgba(240,240,240,0.8);
+  border-radius: 100rpx;
+}
+
+.list-item__text {
+  flex: 1;
+}
+
+.list-item__icon {
+  flex: 0 0 1em;
+}

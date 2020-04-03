@@ -15,7 +15,7 @@ Page({
       },
       {
         title: '精选',
-        link: '/pages/yuyan/guide/guide',
+        link: '/pages/chosen/index/index',
       },
       {
         title: 'demo',

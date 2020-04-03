@@ -1,0 +1,13 @@
+<!--pages/dialog/home/index.wxml-->
+<view class="container">
+  <view class="list">
+    <view class="list-item" bindtap="handleTapType1">
+      <view class="list-item__text">予颜</view>
+      <van-icon name="arrow" size="1em" class="list-item__icon" />
+    </view>
+    <view class="list-item" bindtap="handleTapType2">
+      <view class="list-item__text">优酷</view>
+      <van-icon name="arrow" size="1em" class="list-item__icon" />
+    </view>
+  </view>
+</view>

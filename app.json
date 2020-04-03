@@ -14,6 +14,7 @@
     "pages/dialog/basic/index",
     "pages/dialog/custom/index",
     "pages/dialog/advanced/index",
+    "pages/chosen/index/index",
     "pages/yuyan/guide/guide",
     "pages/yuyan/login/login",
     "pages/youku/index/index",
