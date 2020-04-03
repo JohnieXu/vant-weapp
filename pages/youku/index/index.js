@@ -1,11 +1,51 @@
-// pages/youku/index/index.js
+import { promisify } from '../../../utils/util.js'
+
+const request = promisify(wx.request)
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    tabs: [
+      {
+        id: 0,
+        title: '推荐',
+        list: []
+      },
+      {
+        id: 1,
+        title: '疫情',
+        list: []
+      },
+      {
+        id: 2,
+        title: '剧集',
+        list: []
+      },
+      {
+        id: 3,
+        title: '电影',
+        list: []
+      },
+      {
+        id: 4,
+        title: '少儿',
+        list: []
+      },
+      {
+        id: 5,
+        title: '综艺',
+        list: []
+      },
+      {
+        id: 6,
+        title: '游戏',
+        list: []
+      },
+    ],
+    defaultActiveTab: 0
   },
 
   /**
@@ -25,7 +65,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.getFeeds1()
   },
 
   /**
@@ -68,5 +108,26 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  onVideoError (e) {
+    console.log(e)
+  },
+
+  getFeeds1 () {
+    const url = 'https://lessing.oss-cn-beijing.aliyuncs.com/files/iqiyi/feeds1.json'
+    request({
+      url,
+      method: 'GET'
+    }).then(res => {
+      const { data = [] } = res
+      const tabs = [].concat(this.data.tabs)
+      tabs[0].list = data
+      this.setData({
+        tabs
+      })
+    }).catch(e => {
+      console.error(e)
+    })
   }
 })

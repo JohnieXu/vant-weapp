@@ -1,8 +1,9 @@
 /* pages/youku/index/index.wxss */
 
 page {
-  --page-background-color: #24335B;
+  --page-background-color: #fff;
   --page-reverse-color: #fff;
+  --page-main-color: #24335B;
   background: var(--page-background-color, #24335B);
   color: var(--page-reverse-color, #fff);
 }
@@ -10,10 +11,23 @@ page {
 .header {
   width: 100%;
   height: 64px;
-  background: rgba(200,200,200,.5);
+  /* background: rgba(200,200,200,.5); */
+  background: var(--page-main-color, #24335B);
+}
+
+.van-tabs {
+  --tabs-line-height: 80rpx;
+  --tabs-nav-background-color: #24335B;
+  --tab-text-color: #fff;
+}
+
+.van-tabs .active-tab {
+  font-weight: bold;
+  font-size: 36rpx;
+  color: #4FB1D4;
 }
 
 .video {
   width: 750rpx;
-  height: 640rpx;
+  height: 424rpx;
 }

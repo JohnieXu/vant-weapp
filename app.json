@@ -16,12 +16,13 @@
     "pages/dialog/advanced/index",
     "pages/yuyan/guide/guide",
     "pages/yuyan/login/login",
-    "pages/youku/index/index"
+    "pages/youku/index/index",
+    "pages/youku/webview/webview"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "支付后台",
+    "navigationBarTitleText": "迪诺笔记",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
@@ -49,6 +50,8 @@
     "van-sticky": "@vant/weapp/sticky",
     "van-toast": "@vant/weapp/toast",
     "van-row": "@vant/weapp/row",
-    "van-col": "@vant/weapp/col"
+    "van-col": "@vant/weapp/col",
+    "van-tabs": "@vant/weapp/tabs",
+    "van-tab": "@vant/weapp/tab"
   }
 }

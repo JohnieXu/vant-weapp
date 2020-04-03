@@ -1,0 +1,2 @@
+<!--pages/youku/webview/webview.wxml-->
+<web-view src="https://m.youku.com/alipay_video/id_XMTU4MzM5ODA2MA==.html?spm=a2hww.12630609.lifeDrawer2.2"></web-view>
