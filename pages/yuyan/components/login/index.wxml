@@ -11,7 +11,7 @@
       </view>
       <view class="row-1">
         <input name="password" type="text" confirm-type="done" class="code" placeholder="请输入验证码" value="{{ password }}" bindinput="onPasswordInput" password adjust-position></input>
-        <text bindtap="onClick" class="send-verification-code">发送验证码</text>
+        <text bindtap="onClickCode" class="send-verification-code">发送验证码</text>
       </view>
       <view class="row-2">
         <view class="color-div" />

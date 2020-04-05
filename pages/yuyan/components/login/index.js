@@ -64,7 +64,17 @@ Component({
       })
       return password
     },
+    onClickCode () {
+      wx.showToast({
+        title: '发送成功',
+        icon: 'success'
+      })
+    },
     onLogin (e) {
+      wx.showToast({
+        ttile: '登录成功',
+        icon: 'success'
+      })
       console.log(e.detail.value)
     },
     onLoginOther (e) {
