@@ -11,7 +11,7 @@ Page({
     modules: [
       {
         title: '进阶',
-        link: '',
+        link: '/pages/advanced/index',
       },
       {
         title: '精选',
@@ -23,15 +23,15 @@ Page({
       },
       {
         title: '全部',
-        link: '',
+        link: '/pages/advanced/index',
       },
       {
         title: '推荐',
-        link: '',
+        link: '/pages/advanced/index',
       },
       {
         title: '关于',
-        link: '',
+        link: '/pages/advanced/index',
       },
     ],
     subscription: {

@@ -1,0 +1,4 @@
+/* pages/advanced/index.wxss */
+.card {
+  margin-bottom: 20rpx;
+}

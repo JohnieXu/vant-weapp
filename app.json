@@ -18,7 +18,8 @@
     "pages/yuyan/guide/guide",
     "pages/yuyan/login/login",
     "pages/youku/index/index",
-    "pages/youku/webview/webview"
+    "pages/youku/webview/webview",
+    "pages/advanced/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -53,6 +54,7 @@
     "van-row": "@vant/weapp/row",
     "van-col": "@vant/weapp/col",
     "van-tabs": "@vant/weapp/tabs",
-    "van-tab": "@vant/weapp/tab"
+    "van-tab": "@vant/weapp/tab",
+    "van-card": "@vant/weapp/card"
   }
 }
