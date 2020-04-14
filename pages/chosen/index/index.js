@@ -66,13 +66,13 @@ Page({
 
   handleTapType1: function () {
     wx.navigateTo({
-      url: '/pages/yuyan/guide/guide',
+      url: '/yuyan/pages/guide/guide',
     })
   },
 
   handleTapType2: function () {
     wx.navigateTo({
-      url: '/pages/youku/index/index',
+      url: '/youku/pages/index/index',
     })
   },
 })

@@ -15,18 +15,38 @@
     "pages/dialog/custom/index",
     "pages/dialog/advanced/index",
     "pages/chosen/index/index",
-    "pages/yuyan/guide/guide",
-    "pages/yuyan/login/login",
-    "pages/youku/index/index",
-    "pages/youku/webview/webview",
     "pages/advanced/index"
   ],
+  "subpackages": [
+    {
+      "root": "youku",
+      "name": "youku",
+      "pages": [
+        "pages/index/index",
+        "pages/webview/webview"
+      ]
+    },
+    {
+      "root": "yuyan",
+      "name": "yuyan",
+      "pages": [
+        "pages/login/login",
+        "pages/guide/guide"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/index/index": {
+      "packages": ["yuyan"]
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "迪诺笔记",
     "navigationBarTextStyle": "black"
   },
+  "resizable": true,
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
     "van-button": "@vant/weapp/button",
