@@ -5,7 +5,7 @@
   <p align="center" style="color: #B66112;">请用微信扫码预览</p>
 </p>
 
-# 使用步骤
+# 1 使用步骤
 
 ## 1. 启动API接口服务
 
@@ -56,3 +56,29 @@ yarn server
 <p align="center">
   <img src="https://tva1.sinaimg.cn/large/00831rSTgy1gd0kigpvzhj30r21a0jty.jpg" alt="项目预览" width="400" />
 </p>
+
+# 2 功能预览
+
+## 自定义对话框
+
+<p align="centr">
+  <img src="https://tva1.sinaimg.cn/large/88920041gy1gy0hngdap6j20r21a0gog.jpg" width="400" />
+</p>
+
+<p align="centr">
+  <img src="https://tva1.sinaimg.cn/large/88920041gy1gy0hng8atvj20r21a0gr6.jpg" width="400" />
+</p>
+
+## 优酷小程序 tab 页
+
+<p align="centr">
+  <img src="https://tva1.sinaimg.cn/large/88920041gy1gy0hngqq1pj20r21a0dkx.jpg" width="400" />
+</p>
+
+## 小程序开发引导页
+
+<p align="centr">
+  <img src="https://tva1.sinaimg.cn/large/88920041gy1gy0hnga4bnj20om17ktcp.jpg" width="400" />
+</p>
+
+
