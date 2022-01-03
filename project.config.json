@@ -87,6 +87,13 @@
 					"id": -1,
 					"name": "pages/youku/webview/webview",
 					"pathName": "pages/youku/webview/webview",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "decrypt/pages/index/index",
+					"pathName": "decrypt/pages/index/index",
 					"scene": null
 				}
 			]

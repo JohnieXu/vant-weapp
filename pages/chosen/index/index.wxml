@@ -9,5 +9,9 @@
       <view class="list-item__text">优酷</view>
       <van-icon name="arrow" size="1em" class="list-item__icon" />
     </view>
+    <view class="list-item" bindtap="handleTapType3">
+      <view class="list-item__text">加解密</view>
+      <van-icon name="arrow" size="1em" class="list-item__icon" />
+    </view>
   </view>
 </view>

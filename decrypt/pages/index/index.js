@@ -1,4 +1,6 @@
-// pages/dialog/home/index.js
+// decrypt/pages/index/index.js
+const { encrypt, decrypt } = require('decrypt-core')
+
 Page({
 
   /**
@@ -12,7 +14,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const res = encrypt('hello world', '123')
+    console.log(res)
+    console.log(decrypt(res, '123'))
   },
 
   /**
@@ -62,23 +66,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  handleTapType1: function () {
-    wx.navigateTo({
-      url: '/yuyan/pages/guide/guide',
-    })
-  },
-
-  handleTapType2: function () {
-    wx.navigateTo({
-      url: '/youku/pages/index/index',
-    })
-  },
-
-  handleTapType3: function () {
-    wx.navigateTo({
-      url: '/decrypt/pages/index/index',
-    })
-  },
+  }
 })

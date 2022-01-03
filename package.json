@@ -5,7 +5,10 @@
   "author": "JohnieXu <281910378@qq.com>",
   "license": "MIT",
   "dependencies": {
-    "@vant/weapp": "^1.0.4"
+    "@vant/weapp": "^1.0.4",
+    "crypto-js": "3.1.2",
+    "decrypt-core": "^1.0.1",
+    "miniprogram-sm-crypto": "^0.3.7"
   },
   "devDependencies": {
     "json-server": "^0.15.1"

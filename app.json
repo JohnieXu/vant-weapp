@@ -14,8 +14,7 @@
     "pages/dialog/basic/index",
     "pages/dialog/custom/index",
     "pages/dialog/advanced/index",
-    "pages/chosen/index/index",
-    "pages/advanced/index"
+    "pages/chosen/index/index"
   ],
   "subpackages": [
     {
@@ -33,11 +32,20 @@
         "pages/login/login",
         "pages/guide/guide"
       ]
+    },
+    {
+      "root": "decrypt",
+      "name": "decrypt",
+      "pages": [
+        "pages/index/index"
+      ]
     }
   ],
   "preloadRule": {
     "pages/index/index": {
-      "packages": ["yuyan"]
+      "packages": [
+        "yuyan"
+      ]
     }
   },
   "window": {
