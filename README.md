@@ -61,23 +61,23 @@ yarn server
 
 ## 自定义对话框
 
-<p align="centr">
+<p align="center">
   <img src="https://tva1.sinaimg.cn/large/88920041gy1gy0hngdap6j20r21a0gog.jpg" width="400" />
 </p>
 
-<p align="centr">
+<p align="center">
   <img src="https://tva1.sinaimg.cn/large/88920041gy1gy0hng8atvj20r21a0gr6.jpg" width="400" />
 </p>
 
 ## 优酷小程序 tab 页
 
-<p align="centr">
+<p align="center">
   <img src="https://tva1.sinaimg.cn/large/88920041gy1gy0hngqq1pj20r21a0dkx.jpg" width="400" />
 </p>
 
 ## 小程序开发引导页
 
-<p align="centr">
+<p align="center">
   <img src="https://tva1.sinaimg.cn/large/88920041gy1gy0hnga4bnj20om17ktcp.jpg" width="400" />
 </p>
 
