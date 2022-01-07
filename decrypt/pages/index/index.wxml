@@ -5,74 +5,22 @@
       <van-tab title="加密" name="a">
         <view>
           <van-cell-group>
-            <van-field
-              value="{{ appkey }}"
-              name="appkey"
-              placeholder="请填写秘钥"
-              border="{{ true }}"
-              bind:change="handleAppkeyChange"
-              error-message=""
-              auto-focus
-              clearable
-            />
-            <van-field
-              value="{{ source }}"
-              name="source"
-              type="textarea"
-              placeholder="请填写数据"
-              border="{{ true }}"
-              bind:change="handleSourceChange"
-              error-message=""
-              autosize="{{ sourceAutosize }}"
-              clearable
-            />
-            <van-field
-              value="{{ result }}"
-              name="result"
-              type="textarea"
-              placeholder="暂无结果"
-              border="{{ true }}"
-              error-message=""
-              autosize="{{ resultAutosize }}"
-              readonly
-            />
+            <van-field value="{{ appkey }}" name="appkey" label="秘钥" placeholder="请填写秘钥" border="{{ true }}" title-width="3em" bind:change="handleAppkeyChange" error-message="" auto-focus clearable />
+            <van-field value="{{ source }}" name="source" type="textarea" label="数据" placeholder="请填写数据" border="{{ true }}" title-width="3em" bind:change="handleSourceChange" error-message="" autosize="{{ sourceAutosize }}" clearable />
+            <van-field value="{{ result }}" name="result" type="textarea" label="" placeholder="" border="{{ true }}" title-width="3em" error-message="" autosize="{{ resultAutosize }}" readonly>
+              <van-button wx:if="{{ result }}" slot="button" size="small" type="primary" bind:click="handleCopyClick" color="#ee0a24">复制</van-button>
+            </van-field>
           </van-cell-group>
         </view>
       </van-tab>
       <van-tab title="解密" name="b">
         <view>
           <van-cell-group>
-            <van-field
-              value="{{ appkey }}"
-              name="appkey"
-              placeholder="请填写秘钥"
-              border="{{ true }}"
-              bind:change="handleAppkeyChange"
-              error-message=""
-              auto-focus
-              clearable
-            />
-            <van-field
-              value="{{ source }}"
-              name="source"
-              type="textarea"
-              placeholder="请填写数据"
-              border="{{ true }}"
-              bind:change="handleSourceChange"
-              error-message=""
-              autosize="{{ sourceAutosize }}"
-              clearable
-            />
-            <van-field
-              value="{{ result }}"
-              name="result"
-              type="textarea"
-              placeholder="暂无结果"
-              border="{{ true }}"
-              error-message=""
-              autosize="{{ resultAutosize }}"
-              readonly
-            />
+            <van-field value="{{ appkey }}" name="appkey" label="秘钥" placeholder="请填写秘钥" border="{{ true }}" title-width="3em" bind:change="handleAppkeyChange" error-message="" auto-focus clearable />
+            <van-field value="{{ source }}" name="source" type="textarea" label="数据" placeholder="请填写数据" border="{{ true }}" title-width="3em" bind:change="handleSourceChange" error-message="" autosize="{{ sourceAutosize }}" clearable />
+            <van-field value="{{ result }}" name="result" type="textarea" label="" placeholder="" border="{{ true }}" title-width="3em" error-message="" autosize="{{ resultAutosize }}" readonly>
+              <van-button wx:if="{{ result }}" slot="button" size="small" type="primary" bind:click="handleCopyClick" color="#ee0a24">复制</van-button>
+            </van-field>
           </van-cell-group>
         </view>
       </van-tab>
@@ -80,5 +28,5 @@
   </view>
 </view>
 <view class="button">
-  <van-button type="primary" size="small" block bind:click="handleStartClick">开始</van-button>
+  <van-button type="primary" size="normal" block bind:click="handleStartClick" color="#ee0a24">开始</van-button>
 </view>

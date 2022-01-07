@@ -19,13 +19,17 @@ var defaultOptions = {
     background: '',
     duration: 3000,
     zIndex: 110,
+    top: 0,
     color: color_1.WHITE,
     safeAreaInsetTop: false,
     onClick: function () { },
     onOpened: function () { },
-    onClose: function () { }
+    onClose: function () { },
 };
 function parseOptions(message) {
+    if (message == null) {
+        return {};
+    }
     return typeof message === 'string' ? { message: message } : message;
 }
 function getContext() {

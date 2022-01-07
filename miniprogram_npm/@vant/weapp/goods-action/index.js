@@ -1,24 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var component_1 = require("../common/component");
-component_1.VantComponent({
-    relation: {
-        type: 'descendant',
-        name: 'goods-action-button',
-        linked: function (child) {
-            this.children.push(child);
-        },
-        unlinked: function (child) {
-            this.children = this.children.filter(function (item) { return item !== child; });
-        }
-    },
-    beforeCreate: function () {
-        this.children = [];
-    },
+var relation_1 = require("../common/relation");
+(0, component_1.VantComponent)({
+    relation: (0, relation_1.useChildren)('goods-action-button', function () {
+        this.children.forEach(function (item) {
+            item.updateStyle();
+        });
+    }),
     props: {
         safeAreaInsetBottom: {
             type: Boolean,
-            value: true
-        }
-    }
+            value: true,
+        },
+    },
 });

@@ -1,33 +1,22 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var component_1 = require("../common/component");
-component_1.VantComponent({
-    relation: {
-        name: 'collapse-item',
-        type: 'descendant',
-        linked: function (child) {
-            this.children.push(child);
-        },
-        unlinked: function (child) {
-            this.children = this.children.filter(function (item) { return item !== child; });
-        }
-    },
+var relation_1 = require("../common/relation");
+(0, component_1.VantComponent)({
+    relation: (0, relation_1.useChildren)('collapse-item'),
     props: {
         value: {
             type: null,
-            observer: 'updateExpanded'
+            observer: 'updateExpanded',
         },
         accordion: {
             type: Boolean,
-            observer: 'updateExpanded'
+            observer: 'updateExpanded',
         },
         border: {
             type: Boolean,
-            value: true
-        }
-    },
-    beforeCreate: function () {
-        this.children = [];
+            value: true,
+        },
     },
     methods: {
         updateExpanded: function () {
@@ -37,6 +26,7 @@ component_1.VantComponent({
         },
         switch: function (name, expanded) {
             var _a = this.data, accordion = _a.accordion, value = _a.value;
+            var changeItem = name;
             if (!accordion) {
                 name = expanded
                     ? (value || []).concat(name)
@@ -45,8 +35,14 @@ component_1.VantComponent({
             else {
                 name = expanded ? name : '';
             }
+            if (expanded) {
+                this.$emit('open', changeItem);
+            }
+            else {
+                this.$emit('close', changeItem);
+            }
             this.$emit('change', name);
             this.$emit('input', name);
-        }
-    }
+        },
+    },
 });

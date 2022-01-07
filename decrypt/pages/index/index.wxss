@@ -1,6 +1,7 @@
 /* decrypt/pages/index/index.wxss */
 .top {
-  width: 60vw;
+  /* width: 60vw; */
+  width: 100vw;
   margin: 10px auto;
 }
 

@@ -1,7 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var component_1 = require("../common/component");
-component_1.VantComponent({
+var button_1 = require("../mixins/button");
+(0, component_1.VantComponent)({
+    mixins: [button_1.button],
     props: {
         show: Boolean,
         title: String,
@@ -9,41 +11,51 @@ component_1.VantComponent({
         description: String,
         round: {
             type: Boolean,
-            value: true
+            value: true,
         },
         zIndex: {
             type: Number,
-            value: 100
+            value: 100,
         },
         actions: {
             type: Array,
-            value: []
+            value: [],
         },
         overlay: {
             type: Boolean,
-            value: true
+            value: true,
         },
         closeOnClickOverlay: {
             type: Boolean,
-            value: true
+            value: true,
         },
         closeOnClickAction: {
             type: Boolean,
-            value: true
+            value: true,
         },
         safeAreaInsetBottom: {
             type: Boolean,
-            value: true
-        }
+            value: true,
+        },
     },
     methods: {
         onSelect: function (event) {
+            var _this = this;
             var index = event.currentTarget.dataset.index;
-            var item = this.data.actions[index];
-            if (item && !item.disabled && !item.loading) {
+            var _a = this.data, actions = _a.actions, closeOnClickAction = _a.closeOnClickAction, canIUseGetUserProfile = _a.canIUseGetUserProfile;
+            var item = actions[index];
+            if (item) {
                 this.$emit('select', item);
-                if (this.data.closeOnClickAction) {
+                if (closeOnClickAction) {
                     this.onClose();
+                }
+                if (item.openType === 'getUserInfo' && canIUseGetUserProfile) {
+                    wx.getUserProfile({
+                        desc: item.getUserProfileDesc || '  ',
+                        complete: function (userProfile) {
+                            _this.$emit('getuserinfo', userProfile);
+                        },
+                    });
                 }
             }
         },
@@ -56,6 +68,6 @@ component_1.VantComponent({
         onClickOverlay: function () {
             this.$emit('click-overlay');
             this.onClose();
-        }
-    }
+        },
+    },
 });

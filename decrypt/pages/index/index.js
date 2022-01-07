@@ -11,8 +11,8 @@ Page({
     appkey: '',
     source: '',
     result: '',
-    sourceAutosize: { maxHeight: 800, minHeight: 500 },
-    resultAutosize: { maxHeight: 800, minHeight: 500 }
+    sourceAutosize: { maxHeight: 500, minHeight: 120 },
+    resultAutosize: { maxHeight: 500, minHeight: 120 }
   },
 
   /**
@@ -73,9 +73,9 @@ Page({
 
   },
   handleTabChange (e) {
-    wx.showToast({
-      title: `${e.detail.name}`,
-      icon: 'none'
+    this.setData({
+      result: '',
+      active: e.detail.name
     })
   },
   handleAppkeyChange (e) {
@@ -111,8 +111,29 @@ Page({
     } else {
       const result = decrypt(this.data.source, this.data.appkey)
       this.setData({
-        result: JSON.stringify(result, null, 2)
+        result: typeof result !== 'string' ? JSON.stringify(result, null, 2) : result
       })
     }
+  },
+  handleCopyClick () {
+    if (!this.data.result) {
+      return
+    }
+    wx.setClipboardData({
+      data: this.data.result,
+      success: function(res) {
+        wx.showToast({
+          title: '复制成功',
+          icon: 'none'
+        })
+      },
+      fail: function(res) {
+        wx.showToast({
+          title: '复制到剪贴板失败，请手动复制',
+          icon: 'none'
+        })
+      },
+      complete: function(res) {},
+    })
   }
 })

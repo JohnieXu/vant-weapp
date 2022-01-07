@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.VantComponent = void 0;
 var basic_1 = require("../mixins/basic");
 function mapKeys(source, target, map) {
     Object.keys(map).forEach(function (key) {
@@ -9,8 +10,6 @@ function mapKeys(source, target, map) {
     });
 }
 function VantComponent(vantOptions) {
-    var _a;
-    if (vantOptions === void 0) { vantOptions = {}; }
     var options = {};
     mapKeys(vantOptions, options, {
         data: 'data',
@@ -20,22 +19,21 @@ function VantComponent(vantOptions) {
         beforeCreate: 'created',
         created: 'attached',
         mounted: 'ready',
-        relations: 'relations',
         destroyed: 'detached',
-        classes: 'externalClasses'
+        classes: 'externalClasses',
     });
-    var relation = vantOptions.relation;
-    if (relation) {
-        options.relations = Object.assign(options.relations || {}, (_a = {},
-            _a["../" + relation.name + "/index"] = relation,
-            _a));
-    }
     // add default externalClasses
     options.externalClasses = options.externalClasses || [];
     options.externalClasses.push('custom-class');
     // add default behaviors
     options.behaviors = options.behaviors || [];
     options.behaviors.push(basic_1.basic);
+    // add relations
+    var relation = vantOptions.relation;
+    if (relation) {
+        options.relations = relation.relations;
+        options.behaviors.push(relation.mixin);
+    }
     // map field to form-field behavior
     if (vantOptions.field) {
         options.behaviors.push('wx://form-field');
@@ -43,7 +41,7 @@ function VantComponent(vantOptions) {
     // add default options
     options.options = {
         multipleSlots: true,
-        addGlobalClass: true
+        addGlobalClass: true,
     };
     Component(options);
 }

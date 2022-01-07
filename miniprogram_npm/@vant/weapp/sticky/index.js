@@ -1,129 +1,124 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var utils_1 = require("../common/utils");
 var component_1 = require("../common/component");
+var validator_1 = require("../common/validator");
+var page_scroll_1 = require("../mixins/page-scroll");
 var ROOT_ELEMENT = '.van-sticky';
-component_1.VantComponent({
+(0, component_1.VantComponent)({
     props: {
         zIndex: {
             type: Number,
-            value: 99
+            value: 99,
         },
         offsetTop: {
             type: Number,
             value: 0,
-            observer: 'observeContent'
+            observer: 'onScroll',
         },
         disabled: {
             type: Boolean,
-            observer: function (value) {
-                if (!this.mounted) {
-                    return;
-                }
-                value ? this.disconnectObserver() : this.initObserver();
-            }
+            observer: 'onScroll',
         },
         container: {
             type: null,
-            observer: function (target) {
-                if (typeof target !== 'function' || !this.data.height) {
-                    return;
-                }
-                this.observeContainer();
-            }
-        }
+            observer: 'onScroll',
+        },
+        scrollTop: {
+            type: null,
+            observer: function (val) {
+                this.onScroll({ scrollTop: val });
+            },
+        },
     },
-    data: {
-        height: 0,
-        fixed: false
-    },
-    methods: {
-        getContainerRect: function () {
-            var nodesRef = this.data.container();
-            return new Promise(function (resolve) {
-                return nodesRef.boundingClientRect(resolve).exec();
-            });
-        },
-        initObserver: function () {
-            var _this = this;
-            this.disconnectObserver();
-            this.getRect(ROOT_ELEMENT).then(function (rect) {
-                _this.setData({ height: rect.height });
-                wx.nextTick(function () {
-                    _this.observeContent();
-                    _this.observeContainer();
-                });
-            });
-        },
-        disconnectObserver: function (observerName) {
-            if (observerName) {
-                var observer = this[observerName];
-                observer && observer.disconnect();
-            }
-            else {
-                this.contentObserver && this.contentObserver.disconnect();
-                this.containerObserver && this.containerObserver.disconnect();
-            }
-        },
-        observeContent: function () {
-            var _this = this;
-            var offsetTop = this.data.offsetTop;
-            this.disconnectObserver('contentObserver');
-            var contentObserver = this.createIntersectionObserver({
-                thresholds: [0.9, 1]
-            });
-            contentObserver.relativeToViewport({ top: -offsetTop });
-            contentObserver.observe(ROOT_ELEMENT, function (res) {
-                if (_this.data.disabled) {
-                    return;
-                }
-                _this.setFixed(res.boundingClientRect.top);
-            });
-            this.contentObserver = contentObserver;
-        },
-        observeContainer: function () {
-            var _this = this;
-            if (typeof this.data.container !== 'function') {
+    mixins: [
+        (0, page_scroll_1.pageScrollMixin)(function (event) {
+            if (this.data.scrollTop != null) {
                 return;
             }
-            var height = this.data.height;
-            this.getContainerRect().then(function (rect) {
-                _this.containerHeight = rect.height;
-                _this.disconnectObserver('containerObserver');
-                var containerObserver = _this.createIntersectionObserver({
-                    thresholds: [0.9, 1]
+            this.onScroll(event);
+        }),
+    ],
+    data: {
+        height: 0,
+        fixed: false,
+        transform: 0,
+    },
+    mounted: function () {
+        this.onScroll();
+    },
+    methods: {
+        onScroll: function (_a) {
+            var _this = this;
+            var _b = _a === void 0 ? {} : _a, scrollTop = _b.scrollTop;
+            var _c = this.data, container = _c.container, offsetTop = _c.offsetTop, disabled = _c.disabled;
+            if (disabled) {
+                this.setDataAfterDiff({
+                    fixed: false,
+                    transform: 0,
                 });
-                _this.containerObserver = containerObserver;
-                containerObserver.relativeToViewport({
-                    top: _this.containerHeight - height
-                });
-                containerObserver.observe(ROOT_ELEMENT, function (res) {
-                    if (_this.data.disabled) {
-                        return;
+                return;
+            }
+            this.scrollTop = scrollTop || this.scrollTop;
+            if (typeof container === 'function') {
+                Promise.all([
+                    (0, utils_1.getRect)(this, ROOT_ELEMENT),
+                    this.getContainerRect(),
+                ]).then(function (_a) {
+                    var root = _a[0], container = _a[1];
+                    if (offsetTop + root.height > container.height + container.top) {
+                        _this.setDataAfterDiff({
+                            fixed: false,
+                            transform: container.height - root.height,
+                        });
                     }
-                    _this.setFixed(res.boundingClientRect.top);
+                    else if (offsetTop >= root.top) {
+                        _this.setDataAfterDiff({
+                            fixed: true,
+                            height: root.height,
+                            transform: 0,
+                        });
+                    }
+                    else {
+                        _this.setDataAfterDiff({ fixed: false, transform: 0 });
+                    }
+                });
+                return;
+            }
+            (0, utils_1.getRect)(this, ROOT_ELEMENT).then(function (root) {
+                if (!(0, validator_1.isDef)(root)) {
+                    return;
+                }
+                if (offsetTop >= root.top) {
+                    _this.setDataAfterDiff({ fixed: true, height: root.height });
+                    _this.transform = 0;
+                }
+                else {
+                    _this.setDataAfterDiff({ fixed: false });
+                }
+            });
+        },
+        setDataAfterDiff: function (data) {
+            var _this = this;
+            wx.nextTick(function () {
+                var diff = Object.keys(data).reduce(function (prev, key) {
+                    if (data[key] !== _this.data[key]) {
+                        prev[key] = data[key];
+                    }
+                    return prev;
+                }, {});
+                if (Object.keys(diff).length > 0) {
+                    _this.setData(diff);
+                }
+                _this.$emit('scroll', {
+                    scrollTop: _this.scrollTop,
+                    isFixed: data.fixed || _this.data.fixed,
                 });
             });
         },
-        setFixed: function (top) {
-            var _a = this.data, offsetTop = _a.offsetTop, height = _a.height;
-            var containerHeight = this.containerHeight;
-            var fixed = containerHeight && height
-                ? top >= height - containerHeight && top < offsetTop
-                : top < offsetTop;
-            this.$emit('scroll', {
-                scrollTop: top,
-                isFixed: fixed
-            });
-            this.setData({ fixed: fixed });
-        }
+        getContainerRect: function () {
+            var nodesRef = this.data.container();
+            return new Promise(function (resolve) { return nodesRef.boundingClientRect(resolve).exec(); });
+        },
     },
-    mounted: function () {
-        this.mounted = true;
-        if (!this.data.disabled) {
-            this.initObserver();
-        }
-    },
-    destroyed: function () {
-        this.disconnectObserver();
-    }
 });
