@@ -7,7 +7,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    active: 'a',
+    appkey: '',
+    source: '',
+    result: '',
+    sourceAutosize: { maxHeight: 800, minHeight: 500 },
+    resultAutosize: { maxHeight: 800, minHeight: 500 }
   },
 
   /**
@@ -66,5 +71,48 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  handleTabChange (e) {
+    wx.showToast({
+      title: `${e.detail.name}`,
+      icon: 'none'
+    })
+  },
+  handleAppkeyChange (e) {
+    this.setData({
+      appkey: e.detail
+    })
+  },
+  handleSourceChange (e) {
+    this.setData({
+      source: e.detail
+    })
+  },
+  handleStartClick () {
+    if (!this.data.appkey) {
+      wx.showToast({
+        title: '请填写秘钥',
+        icon: 'none'
+      })
+      return
+    }
+    if (!this.data.source) {
+      wx.showToast({
+        title: '请填写数据',
+        icon: 'none'
+      })
+      return
+    }
+    if (this.data.active === 'a') {
+      const result = encrypt(this.data.source, this.data.appkey)
+      this.setData({
+        result
+      })
+    } else {
+      const result = decrypt(this.data.source, this.data.appkey)
+      this.setData({
+        result: JSON.stringify(result, null, 2)
+      })
+    }
   }
 })
