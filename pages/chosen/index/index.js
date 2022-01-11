@@ -71,8 +71,14 @@ Page({
   },
 
   handleTapType2: function () {
-    wx.navigateTo({
-      url: '/youku/pages/index/index',
+    // 由于微信限制个人小程序提供视频服务，暂时注释掉跳转优酷应用的逻辑，可以本地进行预览
+    // wx.navigateTo({
+    //   url: '/youku/pages/index/index',
+    // })
+    wx.showToast({
+      title: '由于微信限制个人小程序提供视频服务，请克隆项目本地预览此功能',
+      icon: 'none',
+      duration: 5000
     })
   },
 

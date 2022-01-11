@@ -87,4 +87,20 @@ yarn server
   <img src="https://tva1.sinaimg.cn/large/88920041gy1gy0hnga4bnj20om17ktcp.jpg" width="400" />
 </p>
 
+# 3 QA
 
+## 3.1 关于优酷小程序 tab 页不可见
+
+  > 由于微信限制个人小程序提供视频服务，暂时注释掉跳转优酷应用的逻辑，克隆此仓库代码并在 app.json 的 subpackages 配置项中追加以下内容即可本地预览
+
+  ```json
+
+    {
+      "root": "youku",
+      "name": "youku",
+      "pages": [
+        "pages/index/index",
+        "pages/webview/webview"
+      ]
+    }
+  ```

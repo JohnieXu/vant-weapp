@@ -18,14 +18,6 @@
   ],
   "subpackages": [
     {
-      "root": "youku",
-      "name": "youku",
-      "pages": [
-        "pages/index/index",
-        "pages/webview/webview"
-      ]
-    },
-    {
       "root": "yuyan",
       "name": "yuyan",
       "pages": [
