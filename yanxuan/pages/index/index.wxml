@@ -1,0 +1,26 @@
+<!--yanxuan/pages/index/index.wxml-->
+<text>yanxuan/pages/index/index.wxml</text>
+<block>
+  <van-tabs active="{{activeTab}}">
+    <van-tab wx:for="{{tabs}}" title="{{item.title}}" name="{{item.name}}">
+      <text>{{item.name}}</text>
+      <view wx:if="{{item.name === 'a'}}">
+        <swiper indicator-dots autoplay style="width: 360rpx; height: 549rpx;">
+          <swiper-item>
+            <van-image fit="cover" width="360rpx" height="549rpx" radius="18rpx" src="https://yanxuan.nosdn.127.net/static-union/164603033799df52.jpg?imageView&thumbnail=0x1052"></van-image>
+          </swiper-item>
+          <swiper-item>
+            <van-image fit="cover" width="360rpx" height="549rpx" radius="18rpx" src="https://yanxuan.nosdn.127.net/static-union/1646979565d23491.png?imageView&thumbnail=0x1052"></van-image>
+          </swiper-item>
+          <swiper-item>
+            <van-image fit="cover" width="360rpx" height="549rpx" radius="18rpx" src="https://yanxuan.nosdn.127.net/static-union/164663626086e388.jpg?imageView&thumbnail=0x1052"></van-image>
+          </swiper-item>
+          <swiper-item>
+            <van-image fit="cover" width="360rpx" height="549rpx" radius="18rpx" src="https://yanxuan.nosdn.127.net/static-union/1646979681cc20e3.png?imageView&thumbnail=0x1052"></van-image>
+          </swiper-item>
+        </swiper>
+        <text>猜你喜欢</text>
+      </view>
+    </van-tab>
+  </van-tabs>
+</block>

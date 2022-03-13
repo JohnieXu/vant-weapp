@@ -31,6 +31,13 @@
       "pages": [
         "pages/index/index"
       ]
+    },
+    {
+      "root": "yanxuan",
+      "name": "yanxuan",
+      "pages": [
+        "pages/index/index"
+      ]
     }
   ],
   "preloadRule": {
