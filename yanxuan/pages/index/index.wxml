@@ -1,11 +1,9 @@
 <!--yanxuan/pages/index/index.wxml-->
-<text>yanxuan/pages/index/index.wxml</text>
 <block>
-  <van-tabs active="{{activeTab}}">
+  <van-tabs active="{{activeTab}}" line-height="0">
     <van-tab wx:for="{{tabs}}" title="{{item.title}}" name="{{item.name}}">
-      <text>{{item.name}}</text>
-      <view wx:if="{{item.name === 'a'}}">
-        <swiper indicator-dots autoplay style="width: 360rpx; height: 549rpx;">
+      <view class="tab-a__section-a" wx:if="{{item.name === 'a'}}">
+        <swiper class="tab-a__section-a__left" indicator-dots autoplay style="width: 360rpx; height: 549rpx;">
           <swiper-item>
             <van-image fit="cover" width="360rpx" height="549rpx" radius="18rpx" src="https://yanxuan.nosdn.127.net/static-union/164603033799df52.jpg?imageView&thumbnail=0x1052"></van-image>
           </swiper-item>
@@ -19,7 +17,42 @@
             <van-image fit="cover" width="360rpx" height="549rpx" radius="18rpx" src="https://yanxuan.nosdn.127.net/static-union/1646979681cc20e3.png?imageView&thumbnail=0x1052"></van-image>
           </swiper-item>
         </swiper>
-        <text>猜你喜欢</text>
+        <view class="tab-a__section-a__right">
+          <view class="tab-a__section-a__right-chaodi">
+            <view>
+              <text>每日抄底</text>
+            </view>
+            <view class="block-center flex justify-center">
+              <view style="display: flex; flex-direction: column; width: 100rpx;">
+                <van-image fit="cover" width="100rpx" height="100rpx" src="https://yanxuan-item.nosdn.127.net/447948a5c9bae5b18e7afd385c1b3755.png?quality=65&thumbnail=108x108&imageView"></van-image>
+                <text class="font-12">￥16.9</text>
+              </view>
+              <view style="display: flex; flex-direction: column; width: 100rpx;">
+                <van-image fit="cover" width="100rpx" height="100rpx" src="https://yanxuan-item.nosdn.127.net/6a9295b92a907bce38aee9ebf06d0c2d.png?quality=65&thumbnail=108x108&imageView"></van-image>
+                <text class="font-12">￥149</text>
+              </view>
+            </view>
+          </view>
+          <view class="tab-a__section-a__right-shoufa">
+            <view>
+              <text>新品首发</text>
+              <text class="badge">每日上新</text>
+            </view>
+            <view class="block-center flex justify-center">
+              <view style="display: flex; flex-direction: column; width: 100rpx;">
+                <van-image fit="cover" width="100rpx" height="100rpx" src="https://yanxuan-item.nosdn.127.net/fcd56568f34474f2194f3b68dc4a8e96.png?quality=65&thumbnail=108x108&imageView"></van-image>
+                <text class="font-12">￥19.9</text>
+              </view>
+              <view style="display: flex; flex-direction: column; width: 100rpx;">
+                <van-image fit="cover" width="100rpx" height="100rpx" src="https://yanxuan-item.nosdn.127.net/07fbe8e4035881c4772eec7a9c2f782e.png?quality=65&thumbnail=108x108&imageView"></van-image>
+                <text class="font-12">￥24.9</text><text class="font-12">￥29.9</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view wx:else>
+        <text>{{item.name}}</text>
       </view>
     </van-tab>
   </van-tabs>

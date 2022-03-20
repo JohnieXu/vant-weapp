@@ -1,1 +1,109 @@
 /* yanxuan/pages/index/index.wxss */
+
+page {
+  --border-radius: 18rpx;
+  --middle-border-radius: 14rpx;
+  --main-padding-width: 20rpx;
+}
+
+.block-center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.font-12 {
+  font-size: 12px;
+}
+
+/* flex */
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-1 {
+  flex: 1 1 0%;
+}
+.flex-none {
+  flex: none;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.items-start {
+  align-items: flex-start;
+}
+.items-end {
+  align-items: flex-end;
+}
+.items-center {
+  align-items: center;
+}
+.items-stretch {
+  align-items: stretch;
+}
+
+.van-tabs .van-tab__pane {
+  padding: 0 var(--main-padding-width);
+}
+
+.van-tabs__line {
+  /* display: none; */
+}
+
+.tab-a__section-a {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.tab-a__section-a__left {
+  flex: 0 0 360rpx;
+}
+
+.tab-a__section-a__right {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: var(--main-padding-width);
+}
+
+/* 每日抄底 */
+.tab-a__section-a__right-chaodi {
+  padding: 28rpx 20rpx;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: var(--border-radius);
+  background: rgb(251, 231, 230);
+}
+
+/* 新品首发 */
+.tab-a__section-a__right-shoufa {
+  padding: 28rpx 20rpx;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: var(--border-radius);
+  background: rgb(252, 237, 221);
+}
+
+.tab-a__section-a__right-shoufa .badge {
+  background: rgb(235, 167, 89);
+  color: #fff;
+  border-radius: var(--middle-border-radius);
+  margin-left: 10rpx;
+  padding: 0 10rpx;
+  font-size: 12px;
+  line-height: 1;
+}
