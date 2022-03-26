@@ -13,5 +13,9 @@
       <view class="list-item__text">加解密</view>
       <van-icon name="arrow" size="1em" class="list-item__icon" />
     </view>
+    <view class="list-item" bindtap="handleTapType4">
+      <view class="list-item__text">网易严选</view>
+      <van-icon name="arrow" size="1em" class="list-item__icon" />
+    </view>
   </view>
 </view>

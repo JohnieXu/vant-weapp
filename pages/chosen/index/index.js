@@ -87,4 +87,10 @@ Page({
       url: '/decrypt/pages/index/index',
     })
   },
+
+  handleTapType4: function () {
+    wx.navigateTo({
+      url: '/yanxuan/pages/index/index',
+    })
+  },
 })
