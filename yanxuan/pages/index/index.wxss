@@ -15,6 +15,10 @@ page {
   font-size: 12px;
 }
 
+.color-333 {
+  color: #333;
+}
+
 /* flex */
 .flex {
   display: flex;
@@ -38,6 +42,12 @@ page {
 }
 .justify-center {
   justify-content: center;
+}
+.justify-around {
+  justify-content: space-around
+}
+.justify-between {
+  justify-content: space-between;
 }
 .items-start {
   align-items: flex-start;
@@ -89,6 +99,36 @@ page {
   background: rgb(251, 231, 230);
 }
 
+.tab-a__section-a__right-chaodi .title {
+  font-size: 0;
+}
+
+.tab-a__section-a__right-chaodi .title__text {
+  font-weight: bold;
+}
+
+.tab-a__section-a__right-chaodi .price {
+  margin-top: 20rpx;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.tab-a__section-a__right-chaodi .price__text:not(:first-child) {
+  margin-left: 4rpx;
+}
+
+.tab-a__section-a__right-chaodi .price__text--red {
+  color: red;
+}
+
+.tab-a__section-a__right-chaodi .price__text--line {
+  text-decoration: line-through;
+}
+
+.tab-a__section-a__right-chaodi .content {
+  margin-top: 20rpx;
+}
+
 /* 新品首发 */
 .tab-a__section-a__right-shoufa {
   padding: 28rpx 20rpx;
@@ -96,6 +136,32 @@ page {
   width: 100%;
   border-radius: var(--border-radius);
   background: rgb(252, 237, 221);
+}
+
+.tab-a__section-a__right-shoufa .title {
+  font-size: 0;
+}
+
+.tab-a__section-a__right-shoufa .title__text {
+
+}
+
+.tab-a__section-a__right-shoufa .price {
+  margin-top: 20rpx;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.tab-a__section-a__right-shoufa .price__text:not(:first-child) {
+  margin-left: 4rpx;
+}
+
+.tab-a__section-a__right-shoufa .price__text--red {
+  color: red;
+}
+
+.tab-a__section-a__right-shoufa .price__text--line {
+  text-decoration: line-through;
 }
 
 .tab-a__section-a__right-shoufa .badge {
@@ -106,4 +172,8 @@ page {
   padding: 0 10rpx;
   font-size: 12px;
   line-height: 1;
+}
+
+.tab-a__section-a__right-shoufa .content {
+  margin-top: 20rpx;
 }

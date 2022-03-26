@@ -19,33 +19,45 @@
         </swiper>
         <view class="tab-a__section-a__right">
           <view class="tab-a__section-a__right-chaodi">
-            <view>
-              <text>每日抄底</text>
+            <view class="title">
+              <text class="title__text font-12 color-333">每日抄底</text>
             </view>
-            <view class="block-center flex justify-center">
+            <view class="content block-center flex justify-around">
               <view style="display: flex; flex-direction: column; width: 100rpx;">
                 <van-image fit="cover" width="100rpx" height="100rpx" src="https://yanxuan-item.nosdn.127.net/447948a5c9bae5b18e7afd385c1b3755.png?quality=65&thumbnail=108x108&imageView"></van-image>
-                <text class="font-12">￥16.9</text>
+                <view class="price">
+                  <text class="price__text price__text--red">￥16.9</text>
+                  <text class="price__text price__text--line">￥21.9</text>
+                </view>
               </view>
               <view style="display: flex; flex-direction: column; width: 100rpx;">
                 <van-image fit="cover" width="100rpx" height="100rpx" src="https://yanxuan-item.nosdn.127.net/6a9295b92a907bce38aee9ebf06d0c2d.png?quality=65&thumbnail=108x108&imageView"></van-image>
-                <text class="font-12">￥149</text>
+                <view class="price">
+                  <text class="price__text price__text--red">￥149</text>
+                  <text class="price__text price__text--line">￥179</text>
+                </view>
               </view>
             </view>
           </view>
           <view class="tab-a__section-a__right-shoufa">
-            <view>
-              <text>新品首发</text>
+            <view class="title">
+              <text class="title__text font-12 color-333">新品首发</text>
               <text class="badge">每日上新</text>
             </view>
-            <view class="block-center flex justify-center">
+            <view class="content block-center flex justify-around">
               <view style="display: flex; flex-direction: column; width: 100rpx;">
                 <van-image fit="cover" width="100rpx" height="100rpx" src="https://yanxuan-item.nosdn.127.net/fcd56568f34474f2194f3b68dc4a8e96.png?quality=65&thumbnail=108x108&imageView"></van-image>
-                <text class="font-12">￥19.9</text>
+                <view class="price">
+                  <text class="price__text price__text--red">￥19.9</text>
+                  <text class="price__text price__text--line">￥29.9</text>
+                </view>
               </view>
               <view style="display: flex; flex-direction: column; width: 100rpx;">
                 <van-image fit="cover" width="100rpx" height="100rpx" src="https://yanxuan-item.nosdn.127.net/07fbe8e4035881c4772eec7a9c2f782e.png?quality=65&thumbnail=108x108&imageView"></van-image>
-                <text class="font-12">￥24.9</text><text class="font-12">￥29.9</text>
+                <view class="price">
+                  <text class="price__text price__text--red">￥24.9</text>
+                  <text class="price__text price__text--line">￥29.9</text>
+                </view>
               </view>
             </view>
           </view>
