@@ -64,6 +64,13 @@ Page({
 
   },
 
+  /**
+   * 分享到朋友圈
+   */
+  onShareTimeline: function () {
+
+  },
+
   handleTapType1: function () {
     wx.navigateTo({
       url: '/yuyan/pages/guide/guide',

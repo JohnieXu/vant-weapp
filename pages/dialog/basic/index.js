@@ -66,6 +66,13 @@ Page({
 
   },
 
+  /**
+   * 分享到朋友圈
+   */
+  onShareTimeline: function () {
+
+  },
+
   handleButtonClick1: function () {
     Dialog.alert({
       title: '标题',

@@ -40,6 +40,19 @@ Page({
     },
     wechatIcon: 'https://tva1.sinaimg.cn/large/00831rSTly1gclqf08h4aj301100udfl.jpg',
   },
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  },
+
+  /**
+   * 分享到朋友圈
+   */
+  onShareTimeline: function () {
+
+  },
   // 模块点击
   handleModuleTap: (e) => {
     const title = e.target.dataset.title

@@ -72,6 +72,13 @@ Page({
   onShareAppMessage: function () {
 
   },
+
+  /**
+   * 分享到朋友圈
+   */
+  onShareTimeline: function () {
+
+  },
   handleTabChange (e) {
     this.setData({
       result: '',

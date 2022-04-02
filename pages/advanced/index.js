@@ -63,6 +63,13 @@ Page({
   onShareAppMessage: function () {
 
   },
+
+  /**
+   * 分享到朋友圈
+   */
+  onShareTimeline: function () {
+
+  },
   
   onItemClick (e) {
     const { target: { dataset: { url } = {} } = {} } = e

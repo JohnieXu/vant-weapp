@@ -66,6 +66,13 @@ Page({
 
   },
 
+  /**
+   * 分享到朋友圈
+   */
+  onShareTimeline: function () {
+
+  },
+
   showDialog: function () {
     this.setData({
       dialogShow: true
