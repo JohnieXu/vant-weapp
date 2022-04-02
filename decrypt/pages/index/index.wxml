@@ -2,7 +2,7 @@
 <view class="top">
   <view class="top-inner">
     <van-tabs active="{{ active }}" bind:change="handleTabChange" type="card">
-      <van-tab title="加密" name="a">
+      <van-tab title="ENC" name="a">
         <view>
           <van-cell-group>
             <van-field value="{{ appkey }}" name="appkey" label="秘钥" placeholder="请填写秘钥" border="{{ true }}" title-width="3em" bind:change="handleAppkeyChange" error-message="" auto-focus clearable />
@@ -13,7 +13,7 @@
           </van-cell-group>
         </view>
       </van-tab>
-      <van-tab title="解密" name="b">
+      <van-tab title="DEC" name="b">
         <view>
           <van-cell-group>
             <van-field value="{{ appkey }}" name="appkey" label="秘钥" placeholder="请填写秘钥" border="{{ true }}" title-width="3em" bind:change="handleAppkeyChange" error-message="" auto-focus clearable />
