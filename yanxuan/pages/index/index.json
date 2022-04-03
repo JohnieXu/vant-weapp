@@ -2,6 +2,7 @@
   "usingComponents": {
     "van-tabs": "@vant/weapp/tabs/index",
     "van-tab": "@vant/weapp/tab/index",
-    "van-image": "@vant/weapp/image/index"
+    "van-image": "@vant/weapp/image/index",
+    "c-card": "../../components/card"
   }
 }

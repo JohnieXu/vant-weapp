@@ -1,0 +1,127 @@
+/* yanxuan/components/card.wxss */
+.c-card {
+  border-radius: 18rpx;
+  flex-grow: 0;
+  flex-shrink: 0;
+  --width-1-24: 4.1666666666666664%;
+  --width-2-24: 8.333333333333332%;
+  --width-3-24: 8.333333333333332%;
+  --width-4-24: 16.666666666666664%;
+  --width-5-24: 20.833333333333336%;
+  --width-6-24: 25%;
+  --width-7-24: 29.166666666666668%;
+  --width-8-24: 33.33333333333333%;
+  --width-9-24: 37.5%;
+  --width-10-24: 41.66666666666667%;
+  --width-11-24: 45.83333333333333%;
+  --width-12-24: 50%;
+  --width-13-24: 54.166666666666664%;
+  --width-14-24: 58.333333333333336%;
+  --width-15-24: 62.5%;
+  --width-16-24: 66.66666666666666%;
+  --width-17-24: 70.83333333333334%;
+  --width-18-24: 75%;
+  --width-19-24: 79.16666666666666%;
+  --width-20-24: 87.5%;
+  --width-21-24: 91.66666666666666%;
+  --width-22-24: 91.66666666666666%;
+  --width-23-24: 95.83333333333334%;
+  --width-24-24: 100%;
+}
+
+.c-card--1 {
+  flex-basis: var(--width-1-24);
+  max-width: var(--width-1-24);
+}
+.c-card--2 {
+  flex-basis: var(--width-2-24);
+  max-width: var(--width-2-24);
+}
+.c-card--3 {
+  flex-basis: var(--width-3-24);
+  max-width: var(--width-3-24);
+}
+.c-card--4 {
+  flex-basis: var(--width-4-24);
+  max-width: var(--width-4-24);
+}
+.c-card--5 {
+  flex-basis: var(--width-5-24);
+  max-width: var(--width-5-24);
+}
+.c-card--6 {
+  flex-basis: var(--width-6-24);
+  max-width: var(--width-6-24);
+}
+.c-card--7 {
+  flex-basis: var(--width-7-24);
+  max-width: var(--width-7-24);
+}
+.c-card--8 {
+  flex-basis: var(--width-8-24);
+  max-width: var(--width-8-24);
+}
+.c-card--9 {
+  flex-basis: var(--width-9-24);
+  max-width: var(--width-9-24);
+}
+.c-card--10 {
+  flex-basis: var(--width-10-24);
+  max-width: var(--width-10-24);
+}
+.c-card--11 {
+  flex-basis: var(--width-11-24);
+  max-width: var(--width-11-24);
+}
+.c-card--12 {
+  flex-basis: var(--width-12-24);
+  max-width: var(--width-12-24);
+}
+.c-card--13 {
+  flex-basis: var(--width-13-24);
+  max-width: var(--width-13-24);
+}
+.c-card--14 {
+  flex-basis: var(--width-14-24);
+  max-width: var(--width-14-24);
+}
+.c-card--15 {
+  flex-basis: var(--width-15-24);
+  max-width: var(--width-15-24);
+}
+.c-card--16 {
+  flex-basis: var(--width-16-24);
+  max-width: var(--width-16-24);
+}
+.c-card--17 {
+  flex-basis: var(--width-17-24);
+  max-width: var(--width-17-24);
+}
+.c-card--18 {
+  flex-basis: var(--width-18-24);
+  max-width: var(--width-18-24);
+}
+.c-card--19 {
+  flex-basis: var(--width-19-24);
+  max-width: var(--width-19-24);
+}
+.c-card--20 {
+  flex-basis: var(--width-20-24);
+  max-width: var(--width-20-24);
+}
+.c-card--21 {
+  flex-basis: var(--width-21-24);
+  max-width: var(--width-21-24);
+}
+.c-card--22 {
+  flex-basis: var(--width-22-24);
+  max-width: var(--width-22-24);
+}
+.c-card--23 {
+  flex-basis: var(--width-23-24);
+  max-width: var(--width-23-24);
+}
+.c-card--24 {
+  flex-basis: var(--width-24-24);
+  max-width: var(--width-24-24);
+}

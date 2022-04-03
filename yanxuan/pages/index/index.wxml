@@ -2,65 +2,76 @@
 <block>
   <van-tabs active="{{activeTab}}" line-height="0">
     <van-tab wx:for="{{tabs}}" title="{{item.title}}" name="{{item.name}}">
-      <view class="tab-a__section-a" wx:if="{{item.name === 'a'}}">
-        <swiper class="tab-a__section-a__left" indicator-dots autoplay style="width: 360rpx; height: 549rpx;">
-          <swiper-item>
-            <van-image fit="cover" width="360rpx" height="549rpx" radius="18rpx" src="https://yanxuan.nosdn.127.net/static-union/164603033799df52.jpg?imageView&thumbnail=0x1052"></van-image>
-          </swiper-item>
-          <swiper-item>
-            <van-image fit="cover" width="360rpx" height="549rpx" radius="18rpx" src="https://yanxuan.nosdn.127.net/static-union/1646979565d23491.png?imageView&thumbnail=0x1052"></van-image>
-          </swiper-item>
-          <swiper-item>
-            <van-image fit="cover" width="360rpx" height="549rpx" radius="18rpx" src="https://yanxuan.nosdn.127.net/static-union/164663626086e388.jpg?imageView&thumbnail=0x1052"></van-image>
-          </swiper-item>
-          <swiper-item>
-            <van-image fit="cover" width="360rpx" height="549rpx" radius="18rpx" src="https://yanxuan.nosdn.127.net/static-union/1646979681cc20e3.png?imageView&thumbnail=0x1052"></van-image>
-          </swiper-item>
-        </swiper>
-        <view class="tab-a__section-a__right">
-          <view class="tab-a__section-a__right-chaodi">
-            <view class="title">
-              <text class="title__text font-12 color-333">每日抄底</text>
-            </view>
-            <view class="content block-center flex justify-around">
-              <view style="display: flex; flex-direction: column; width: 100rpx;">
-                <van-image fit="cover" width="100rpx" height="100rpx" src="https://yanxuan-item.nosdn.127.net/447948a5c9bae5b18e7afd385c1b3755.png?quality=65&thumbnail=108x108&imageView"></van-image>
-                <view class="price">
-                  <text class="price__text price__text--red">￥16.9</text>
-                  <text class="price__text price__text--line">￥21.9</text>
+      <view wx:if="{{item.name === 'a'}}">
+        <view class="tab-a__section-a">
+          <swiper class="tab-a__section-a__left" indicator-dots autoplay style="width: 360rpx; height: 549rpx;">
+            <swiper-item>
+              <van-image fit="cover" width="360rpx" height="549rpx" radius="18rpx" src="https://yanxuan.nosdn.127.net/static-union/164603033799df52.jpg?imageView&thumbnail=0x1052"></van-image>
+            </swiper-item>
+            <swiper-item>
+              <van-image fit="cover" width="360rpx" height="549rpx" radius="18rpx" src="https://yanxuan.nosdn.127.net/static-union/1646979565d23491.png?imageView&thumbnail=0x1052"></van-image>
+            </swiper-item>
+            <swiper-item>
+              <van-image fit="cover" width="360rpx" height="549rpx" radius="18rpx" src="https://yanxuan.nosdn.127.net/static-union/164663626086e388.jpg?imageView&thumbnail=0x1052"></van-image>
+            </swiper-item>
+            <swiper-item>
+              <van-image fit="cover" width="360rpx" height="549rpx" radius="18rpx" src="https://yanxuan.nosdn.127.net/static-union/1646979681cc20e3.png?imageView&thumbnail=0x1052"></van-image>
+            </swiper-item>
+          </swiper>
+          <view class="tab-a__section-a__right">
+            <view class="tab-a__section-a__right-chaodi">
+              <view class="title">
+                <text class="title__text font-12 color-333">每日抄底</text>
+              </view>
+              <view class="content block-center flex justify-around">
+                <view style="display: flex; flex-direction: column; width: 100rpx;">
+                  <van-image fit="cover" width="100rpx" height="100rpx" src="https://yanxuan-item.nosdn.127.net/447948a5c9bae5b18e7afd385c1b3755.png?quality=65&thumbnail=108x108&imageView"></van-image>
+                  <view class="price">
+                    <text class="price__text price__text--red">￥16.9</text>
+                    <text class="price__text price__text--line">￥21.9</text>
+                  </view>
+                </view>
+                <view style="display: flex; flex-direction: column; width: 100rpx;">
+                  <van-image fit="cover" width="100rpx" height="100rpx" src="https://yanxuan-item.nosdn.127.net/6a9295b92a907bce38aee9ebf06d0c2d.png?quality=65&thumbnail=108x108&imageView"></van-image>
+                  <view class="price">
+                    <text class="price__text price__text--red">￥149</text>
+                    <text class="price__text price__text--line">￥179</text>
+                  </view>
                 </view>
               </view>
-              <view style="display: flex; flex-direction: column; width: 100rpx;">
-                <van-image fit="cover" width="100rpx" height="100rpx" src="https://yanxuan-item.nosdn.127.net/6a9295b92a907bce38aee9ebf06d0c2d.png?quality=65&thumbnail=108x108&imageView"></van-image>
-                <view class="price">
-                  <text class="price__text price__text--red">￥149</text>
-                  <text class="price__text price__text--line">￥179</text>
+            </view>
+            <view class="tab-a__section-a__right-shoufa">
+              <view class="title">
+                <text class="title__text font-12 color-333">新品首发</text>
+                <text class="badge">每日上新</text>
+              </view>
+              <view class="content block-center flex justify-around">
+                <view style="display: flex; flex-direction: column; width: 100rpx;">
+                  <van-image fit="cover" width="100rpx" height="100rpx" src="https://yanxuan-item.nosdn.127.net/fcd56568f34474f2194f3b68dc4a8e96.png?quality=65&thumbnail=108x108&imageView"></van-image>
+                  <view class="price">
+                    <text class="price__text price__text--red">￥19.9</text>
+                    <text class="price__text price__text--line">￥29.9</text>
+                  </view>
+                </view>
+                <view style="display: flex; flex-direction: column; width: 100rpx;">
+                  <van-image fit="cover" width="100rpx" height="100rpx" src="https://yanxuan-item.nosdn.127.net/07fbe8e4035881c4772eec7a9c2f782e.png?quality=65&thumbnail=108x108&imageView"></van-image>
+                  <view class="price">
+                    <text class="price__text price__text--red">￥24.9</text>
+                    <text class="price__text price__text--line">￥29.9</text>
+                  </view>
                 </view>
               </view>
             </view>
           </view>
-          <view class="tab-a__section-a__right-shoufa">
-            <view class="title">
-              <text class="title__text font-12 color-333">新品首发</text>
-              <text class="badge">每日上新</text>
-            </view>
-            <view class="content block-center flex justify-around">
-              <view style="display: flex; flex-direction: column; width: 100rpx;">
-                <van-image fit="cover" width="100rpx" height="100rpx" src="https://yanxuan-item.nosdn.127.net/fcd56568f34474f2194f3b68dc4a8e96.png?quality=65&thumbnail=108x108&imageView"></van-image>
-                <view class="price">
-                  <text class="price__text price__text--red">￥19.9</text>
-                  <text class="price__text price__text--line">￥29.9</text>
-                </view>
-              </view>
-              <view style="display: flex; flex-direction: column; width: 100rpx;">
-                <van-image fit="cover" width="100rpx" height="100rpx" src="https://yanxuan-item.nosdn.127.net/07fbe8e4035881c4772eec7a9c2f782e.png?quality=65&thumbnail=108x108&imageView"></van-image>
-                <view class="price">
-                  <text class="price__text price__text--red">￥24.9</text>
-                  <text class="price__text price__text--line">￥29.9</text>
-                </view>
-              </view>
-            </view>
-          </view>
+        </view>
+        <!-- 瀑布流列表 -->
+        <view class="tab-a__section-b">
+          <c-card span="12">
+            <text>严选榜单</text>
+            <text>严选超市</text>
+            <text>超值捡漏</text>
+            <text>好物大赏</text>
+          </c-card>
         </view>
       </view>
       <view wx:else>

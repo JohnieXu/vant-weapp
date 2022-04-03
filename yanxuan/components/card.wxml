@@ -1,0 +1,4 @@
+<!--yanxuan/components/card.wxml-->
+<view class="c-card c-card--{{span}}">
+  <slot></slot>
+</view>
