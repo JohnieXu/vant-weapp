@@ -1,4 +1,5 @@
 {
   "navigationBarTitleText": "前端进阶",
-  "usingComponents": {}
+  "usingComponents": {},
+  "enablePullDownRefresh": true
 }

@@ -2,3 +2,7 @@
 .card {
   margin-bottom: 20rpx;
 }
+
+.card .van-card__img {
+  border-radius: 6rpx;
+}

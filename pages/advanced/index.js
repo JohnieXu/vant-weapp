@@ -1,11 +1,13 @@
 // pages/advanced/index.js
+const articleList = require('../../common/data/article')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    articleList
   },
 
   /**
@@ -47,7 +49,14 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    const self = this
+    console.log('aaa')
+    wx.startPullDownRefresh({
+      success: function() {
+        self.loadArticleList()
+        wx.stopPullDownRefresh()
+      }
+    })
   },
 
   /**
@@ -70,11 +79,16 @@ Page({
   onShareTimeline: function () {
 
   },
+
+  loadArticleList() {
+    setData({
+      articleList
+    })
+  },
   
   onItemClick (e) {
     const { target: { dataset: { url } = {} } = {} } = e
     if (url) {
-      console.log(url)
       wx.setClipboardData({
         data: url
       })
