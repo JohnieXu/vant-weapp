@@ -1,4 +1,6 @@
 // yanxuan/pages/index/index.js
+const homeData = require('../../data/home.js')
+
 Page({
 
   /**
@@ -50,7 +52,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getData().then((homeData) => {
+      this.setData({
+        homeData
+      })
+    })
   },
 
   /**
@@ -108,4 +114,9 @@ Page({
   onShareTimeline() {
 
   },
+  getData() {
+    return new Promise((resolve, reject) => {
+      resolve(homeData)
+    })
+  }
 })
