@@ -73,25 +73,23 @@
               wx:key="title"
               src="{{item.imgUrl}}"
               fit="cover"
-              width="160rpx"
-              height="238rpx"
+              width="172rpx"
+              height="258rpx"
             />
           </c-card>
           <block wx:if="homeData && homeData.like && homeData.like.list">
             <c-card
+              class="tab-a__section-b__card"
               span="12"
               wx:for="{{homeData.like.list}}"
               wx:for-item="item"
               wx:key="title"
             >
-              <van-image src="{{item.picUrl}}" fit="cover" width="350rpx" height="350rpx" />
-              <text>{{item.title}}</text>
-              <text wx:if="item.des">{{item.des}}</text>
+              <van-image src="{{item.picUrl}}" fit="cover" width="345rpx" height="345rpx" radius="18rpx" />
+              <view class="title">{{item.title}}</view>
+              <view class="des" wx:if="item.des">{{item.des}}</view>
             </c-card>
           </block>
-          <van-row>
-            <van-col span="8">span: 8</van-col>
-          </van-row>
         </view>
       </view>
       <view wx:else>

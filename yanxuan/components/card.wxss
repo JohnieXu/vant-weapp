@@ -1,5 +1,7 @@
 /* yanxuan/components/card.wxss */
 .c-card {
+  float: left; /* 使 shadow-dom 节点宽度变为 0 */
+  box-sizing: border-box;
   border-radius: 18rpx;
   flex-grow: 0;
   flex-shrink: 0;

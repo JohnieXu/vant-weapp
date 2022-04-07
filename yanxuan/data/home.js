@@ -30,6 +30,30 @@ module.exports = {
         curPrice: 119 * 100,
         oldPrice: 199 * 100,
         targetUrl: '',
+      },
+      {
+        title: '实现内衣自由 黑科技无尺码无钢圈无痕内衣',
+        des: '女式内衣热销榜第1名',
+        picUrl: 'https://yanxuan-item.nosdn.127.net/0407b6dc10162296c1c3bf9be105a018.png?quality=65&thumbnail=345x345&imageView',
+        curPrice: 119 * 100,
+        oldPrice: 199 * 100,
+        targetUrl: '',
+      },
+      {
+        title: '实现内衣自由 黑科技无尺码无钢圈无痕内衣',
+        des: '女式内衣热销榜第1名',
+        picUrl: 'https://yanxuan-item.nosdn.127.net/0407b6dc10162296c1c3bf9be105a018.png?quality=65&thumbnail=345x345&imageView',
+        curPrice: 119 * 100,
+        oldPrice: 199 * 100,
+        targetUrl: '',
+      },
+      {
+        title: '实现内衣自由 黑科技无尺码无钢圈无痕内衣',
+        des: '女式内衣热销榜第1名',
+        picUrl: 'https://yanxuan-item.nosdn.127.net/0407b6dc10162296c1c3bf9be105a018.png?quality=65&thumbnail=345x345&imageView',
+        curPrice: 119 * 100,
+        oldPrice: 199 * 100,
+        targetUrl: '',
       }
     ]
   }

@@ -177,3 +177,24 @@ page {
 .tab-a__section-a__right-shoufa .content {
   margin-top: 20rpx;
 }
+
+.tab-a__section-b {
+  margin-top: 20rpx;
+}
+
+.tab-a__section-b .c-card {
+  margin-top: 20rpx;
+}
+
+.tab-a__section-b c-card:nth-child(2n + 1) .c-card {
+  padding-right: 10rpx;
+}
+
+.tab-a__section-b .tab-a__section-b__card .title {
+  font-size: 14px;
+}
+
+.tab-a__section-b .tab-a__section-b__card .des {
+  font-size: 12px;
+  color: #666;
+}
