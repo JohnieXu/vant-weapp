@@ -1,0 +1,12 @@
+<!--yanxuan/components/home_like_list/index.wxml-->
+<view class="c-home_like_list">
+  <view class="container">
+    <view wx:for="list" wx:for-item="group" wx:key="index" class="group">
+      <template wx:if="Array.isArray(group)">
+        <view wx:for="group" wx:for-item="item" wx:key="item.id">
+          <van-image fit="cover" src="{{item.picUrl}}" width="345rpx" height="345rpx"></van-image>
+        </view>
+      </template>
+    </view>
+  </view>
+</view>

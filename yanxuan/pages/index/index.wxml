@@ -1,5 +1,14 @@
 <!--yanxuan/pages/index/index.wxml-->
 <block>
+  <!-- gif动图 -->
+  <view class="section-ad">
+    <van-image
+      src="https://yanxuan.nosdn.127.net/static-union/1639618260614c21.gif"
+      width="750rpx"
+      height="321rpx"
+      fit="contain"
+    />
+  </view>
   <van-tabs active="{{activeTab}}" line-height="0">
     <van-tab wx:for="{{tabs}}" wx:key="name" title="{{item.title}}" name="{{item.name}}">
       <view wx:if="{{item.name === 'a'}}">

@@ -4,6 +4,7 @@ page {
   --border-radius: 18rpx;
   --middle-border-radius: 14rpx;
   --main-padding-width: 20rpx;
+  --font-serif: serif;
 }
 
 .block-center {
@@ -60,6 +61,11 @@ page {
 }
 .items-stretch {
   align-items: stretch;
+}
+
+.van-tabs .van-tab--active {
+  font-family: var(--font-serif);
+  font-weight: 800;
 }
 
 .van-tabs .van-tab__pane {
@@ -176,6 +182,10 @@ page {
 
 .tab-a__section-a__right-shoufa .content {
   margin-top: 20rpx;
+}
+
+.section-ad {
+  margin: 40rpx auto;
 }
 
 .tab-a__section-b {
