@@ -101,6 +101,14 @@
 					"id": -1,
 					"name": "yanxuan/pages/index/index",
 					"pathName": "yanxuan/pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "demo/recycle_view/index",
+					"pathName": "demo/recycle_view/index",
+					"query": "",
 					"scene": null
 				}
 			]
