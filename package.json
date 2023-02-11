@@ -11,7 +11,7 @@
     "miniprogram-sm-crypto": "^0.3.7"
   },
   "devDependencies": {
-    "json-server": "^0.15.1"
+    "json-server": "^0.17.1"
   },
   "scripts": {
     "server": "json-server --watch ./server/db.json --static ./server"
